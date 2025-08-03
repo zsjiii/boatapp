@@ -1,0 +1,996 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": false,
+                        "column": 12,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"flags\".",
+                        "functionName": "flags",
+                        "line": 12
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 2663,
+                        "errorMessage": "",
+                        "functionName": "pageTitle",
+                        "line": 18
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 2036,
+                        "errorMessage": "",
+                        "functionName": "basicParams",
+                        "line": 28
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 33,
+                        "durationMicroseconds": 1070,
+                        "errorMessage": "",
+                        "functionName": "networkParams",
+                        "line": 38
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 29,
+                        "durationMicroseconds": 2264,
+                        "errorMessage": "",
+                        "functionName": "pidParams",
+                        "line": 49
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 1537,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: saveDialog",
+                        "functionName": "saveConfig",
+                        "line": 528
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 5,
+                        "durationMicroseconds": 1019,
+                        "errorMessage": "",
+                        "functionName": "resetConfig",
+                        "line": 538
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 5,
+                        "durationMicroseconds": 439,
+                        "errorMessage": "Type (component in D:/ZZZ_CESHI/ziyannewcc1_qml/canshusetPage.qml)::pidParams with type QVariant does not have a property rollP for writing",
+                        "functionName": "loadDefaultPid",
+                        "line": 544
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 207,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 66
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 152,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 77
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 217,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 87
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 37,
+                        "durationMicroseconds": 125,
+                        "errorMessage": "Cannot access value for name currentPageIndex",
+                        "functionName": "isSelected",
+                        "line": 100
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 76,
+                        "errorMessage": "Cannot find name currentPageIndex",
+                        "functionName": "onClicked",
+                        "line": 101
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 37,
+                        "durationMicroseconds": 85,
+                        "errorMessage": "Cannot access value for name currentPageIndex",
+                        "functionName": "isSelected",
+                        "line": 107
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 65,
+                        "errorMessage": "Cannot find name currentPageIndex",
+                        "functionName": "onClicked",
+                        "line": 108
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 37,
+                        "durationMicroseconds": 77,
+                        "errorMessage": "Cannot access value for name currentPageIndex",
+                        "functionName": "isSelected",
+                        "line": 114
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 64,
+                        "errorMessage": "Cannot find name currentPageIndex",
+                        "functionName": "onClicked",
+                        "line": 115
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 132,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 168
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 90,
+                        "errorMessage": "Cannot access value for name pageTitle",
+                        "functionName": "text",
+                        "line": 173
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 186
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 42,
+                        "durationMicroseconds": 46,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "text",
+                        "line": 190
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 199
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 234,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 205
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 37,
+                        "durationMicroseconds": 262,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 207
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 77,
+                        "errorMessage": "Cannot access value for name currentPageIndex",
+                        "functionName": "currentIndex",
+                        "line": 217
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 85,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: basicPage",
+                        "functionName": "width",
+                        "line": 225
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 119,
+                        "errorMessage": "Cannot access value for name basicParams",
+                        "functionName": "value",
+                        "line": 244
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 45,
+                        "durationMicroseconds": 152,
+                        "errorMessage": "Cannot access value for name basicParams",
+                        "functionName": "onValueChanged",
+                        "line": 245
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 102,
+                        "errorMessage": "Cannot access value for name basicParams",
+                        "functionName": "value",
+                        "line": 252
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 45,
+                        "durationMicroseconds": 118,
+                        "errorMessage": "Cannot access value for name basicParams",
+                        "functionName": "onValueChanged",
+                        "line": 253
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 92,
+                        "errorMessage": "Cannot access value for name basicParams",
+                        "functionName": "value",
+                        "line": 260
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 154,
+                        "errorMessage": "Cannot access value for name basicParams",
+                        "functionName": "value",
+                        "line": 288
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 45,
+                        "durationMicroseconds": 237,
+                        "errorMessage": "Cannot access value for name basicParams",
+                        "functionName": "onValueChanged",
+                        "line": 292
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 164,
+                        "errorMessage": "Cannot access value for name basicParams",
+                        "functionName": "value",
+                        "line": 299
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 45,
+                        "durationMicroseconds": 158,
+                        "errorMessage": "Cannot access value for name basicParams",
+                        "functionName": "onValueChanged",
+                        "line": 303
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 123,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: networkPage",
+                        "functionName": "width",
+                        "line": 315
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 153,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "value",
+                        "line": 334
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 45,
+                        "durationMicroseconds": 118,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "onValueChanged",
+                        "line": 335
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 93,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "value",
+                        "line": 342
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 265,
+                        "errorMessage": "",
+                        "functionName": "echoMode",
+                        "line": 343
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 45,
+                        "durationMicroseconds": 116,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "onValueChanged",
+                        "line": 344
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 98,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "value",
+                        "line": 371
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 45,
+                        "durationMicroseconds": 105,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "onValueChanged",
+                        "line": 373
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 89,
+                        "durationMicroseconds": 197,
+                        "errorMessage": "Cannot generate efficient code for MoveRegExp",
+                        "functionName": "regularExpression",
+                        "line": 372
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 118,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "value",
+                        "line": 380
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 45,
+                        "durationMicroseconds": 128,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "onValueChanged",
+                        "line": 382
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 88,
+                        "durationMicroseconds": 202,
+                        "errorMessage": "Cannot generate efficient code for MoveRegExp",
+                        "functionName": "regularExpression",
+                        "line": 381
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 132,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "value",
+                        "line": 389
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 45,
+                        "durationMicroseconds": 95,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "onValueChanged",
+                        "line": 391
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 88,
+                        "durationMicroseconds": 141,
+                        "errorMessage": "Cannot generate efficient code for MoveRegExp",
+                        "functionName": "regularExpression",
+                        "line": 390
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 151,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "value",
+                        "line": 398
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 45,
+                        "durationMicroseconds": 82,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "onValueChanged",
+                        "line": 400
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 88,
+                        "durationMicroseconds": 155,
+                        "errorMessage": "Cannot generate efficient code for MoveRegExp",
+                        "functionName": "regularExpression",
+                        "line": 399
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 79,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "value",
+                        "line": 427
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 45,
+                        "durationMicroseconds": 87,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "onValueChanged",
+                        "line": 429
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 76,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "value",
+                        "line": 436
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 45,
+                        "durationMicroseconds": 81,
+                        "errorMessage": "Cannot access value for name networkParams",
+                        "functionName": "onValueChanged",
+                        "line": 438
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 32,
+                        "durationMicroseconds": 68,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: pidPage",
+                        "functionName": "width",
+                        "line": 450
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 44,
+                        "durationMicroseconds": 87,
+                        "errorMessage": "Cannot access value for name pidParams",
+                        "functionName": "value",
+                        "line": 477
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 77,
+                        "durationMicroseconds": 78,
+                        "errorMessage": "Cannot access value for name pidParams",
+                        "functionName": "onValueChanged",
+                        "line": 477
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 44,
+                        "durationMicroseconds": 74,
+                        "errorMessage": "Cannot access value for name pidParams",
+                        "functionName": "value",
+                        "line": 478
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 77,
+                        "durationMicroseconds": 77,
+                        "errorMessage": "Cannot access value for name pidParams",
+                        "functionName": "onValueChanged",
+                        "line": 478
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 44,
+                        "durationMicroseconds": 74,
+                        "errorMessage": "Cannot access value for name pidParams",
+                        "functionName": "value",
+                        "line": 479
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 77,
+                        "durationMicroseconds": 134,
+                        "errorMessage": "Cannot access value for name pidParams",
+                        "functionName": "onValueChanged",
+                        "line": 479
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 44,
+                        "durationMicroseconds": 73,
+                        "errorMessage": "Cannot access value for name pidParams",
+                        "functionName": "value",
+                        "line": 483
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 78,
+                        "durationMicroseconds": 77,
+                        "errorMessage": "Cannot access value for name pidParams",
+                        "functionName": "onValueChanged",
+                        "line": 483
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 44,
+                        "durationMicroseconds": 68,
+                        "errorMessage": "Cannot access value for name pidParams",
+                        "functionName": "value",
+                        "line": 484
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 78,
+                        "durationMicroseconds": 76,
+                        "errorMessage": "Cannot access value for name pidParams",
+                        "functionName": "onValueChanged",
+                        "line": 484
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 44,
+                        "durationMicroseconds": 102,
+                        "errorMessage": "Cannot access value for name pidParams",
+                        "functionName": "value",
+                        "line": 485
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 78,
+                        "durationMicroseconds": 81,
+                        "errorMessage": "Cannot access value for name pidParams",
+                        "functionName": "onValueChanged",
+                        "line": 485
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 323,
+                        "errorMessage": "",
+                        "functionName": "text",
+                        "line": 506
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 40,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 519
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 47,
+                        "durationMicroseconds": 233,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 517
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 26,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"standardButtons\".",
+                        "functionName": "standardButtons",
+                        "line": 564
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"centerIn\".",
+                        "functionName": "centerIn",
+                        "line": 566
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"wrapMode\".",
+                        "functionName": "wrapMode",
+                        "line": 571
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 275,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 583
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 1219,
+                        "errorMessage": "",
+                        "functionName": "color",
+                        "line": 586
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 119,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 589
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 83,
+                        "errorMessage": "Cannot access value for name icon",
+                        "functionName": "text",
+                        "line": 594
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 112,
+                        "errorMessage": "Cannot access value for name isSelected",
+                        "functionName": "color",
+                        "line": 596
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 191,
+                        "errorMessage": "Cannot load property text from QQuickItem::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 600
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 54,
+                        "errorMessage": "Cannot access value for name isSelected",
+                        "functionName": "color",
+                        "line": 601
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 234,
+                        "errorMessage": "Type (component in D:/ZZZ_CESHI/ziyannewcc1_qml/canshusetPage.qml)::parent with type QQuickItem does not have a property clicked for calling",
+                        "functionName": "onClicked",
+                        "line": 609
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 121,
+                        "errorMessage": "Cannot access value for name isSelected",
+                        "functionName": "onEntered",
+                        "line": 610
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 77,
+                        "errorMessage": "Cannot access value for name isSelected",
+                        "functionName": "onExited",
+                        "line": 615
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 74,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 607
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 124,
+                        "errorMessage": "",
+                        "functionName": "echoMode",
+                        "line": 628
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 19,
+                        "durationMicroseconds": 39,
+                        "errorMessage": "Cannot access value for name label",
+                        "functionName": "text",
+                        "line": 636
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 19,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"text\".",
+                        "functionName": "text",
+                        "line": 642
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"readOnly\".",
+                        "functionName": "readOnly",
+                        "line": 643
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"echoMode\".",
+                        "functionName": "echoMode",
+                        "line": 644
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"validator\".",
+                        "functionName": "validator",
+                        "line": 645
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"textChanged\".",
+                        "functionName": "onTextChanged",
+                        "line": 646
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 44,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "color",
+                        "line": 653
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 69,
+                        "errorMessage": "Cannot access value for name label",
+                        "functionName": "text",
+                        "line": 674
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 109,
+                        "errorMessage": "Cannot access value for name value",
+                        "functionName": "text",
+                        "line": 681
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"value\".",
+                        "functionName": "value",
+                        "line": 688
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 19,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"from\".",
+                        "functionName": "from",
+                        "line": 689
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 17,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"to\".",
+                        "functionName": "to",
+                        "line": 690
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 22,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"moved\".",
+                        "functionName": "onMoved",
+                        "line": 692
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 15,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "x",
+                        "line": 699
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 49,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "y",
+                        "line": 700
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 27,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "width",
+                        "line": 703
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 25,
+                        "durationMicroseconds": 18,
+                        "errorMessage": "Cannot access value for name implicitHeight",
+                        "functionName": "height",
+                        "line": 704
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 79,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "width",
+                        "line": 709
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 29,
+                        "durationMicroseconds": 11,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "height",
+                        "line": 710
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 47,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "x",
+                        "line": 717
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 75,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "y",
+                        "line": 718
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 71,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "color",
+                        "line": 722
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"value\".",
+                        "functionName": "value",
+                        "line": 738
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 22,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"moved\".",
+                        "functionName": "onMoved",
+                        "line": 742
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 17,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "x",
+                        "line": 749
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 47,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "y",
+                        "line": 750
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 10,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "width",
+                        "line": 753
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 25,
+                        "durationMicroseconds": 7,
+                        "errorMessage": "Cannot access value for name implicitHeight",
+                        "functionName": "height",
+                        "line": 754
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 66,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "width",
+                        "line": 759
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 29,
+                        "durationMicroseconds": 12,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "height",
+                        "line": 760
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 41,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "x",
+                        "line": 767
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 36,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "y",
+                        "line": 768
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 24,
+                        "durationMicroseconds": 30,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "color",
+                        "line": 772
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 19,
+                        "durationMicroseconds": 38,
+                        "errorMessage": "Cannot access value for name value",
+                        "functionName": "text",
+                        "line": 779
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 34,
+                        "durationMicroseconds": 104,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 781
+                    }
+                ],
+                "filePath": "D:/ZZZ_CESHI/ziyannewcc1_qml/canshusetPage.qml"
+            }
+        ],
+        "moduleId": "ziyannewcc1_qml(appziyannewcc1_qml)"
+    }
+]

@@ -1,0 +1,36 @@
+<RCC>
+  <qresource prefix="/qt/qml/ziyannewcc1_qml/">
+    <file alias="Main.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/Main.qml</file>
+    <file alias="Page1.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/Page1.qml</file>
+    <file alias="Page2.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/Page2.qml</file>
+    <file alias="Page3.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/Page3.qml</file>
+    <file alias="Button_ZSJ1.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/Button_ZSJ1.qml</file>
+    <file alias="AreaEdit.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/AreaEdit.qml</file>
+    <file alias="BtnsPage.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/BtnsPage.qml</file>
+    <file alias="CheckBtn.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/CheckBtn.qml</file>
+    <file alias="CircleProgress.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/CircleProgress.qml</file>
+    <file alias="ClickBtn.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/ClickBtn.qml</file>
+    <file alias="EditPage.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/EditPage.qml</file>
+    <file alias="Instrument.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/Instrument.qml</file>
+    <file alias="LineEdit.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/LineEdit.qml</file>
+    <file alias="Pages.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/Pages.qml</file>
+    <file alias="ProgressesPage.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/ProgressesPage.qml</file>
+    <file alias="RadioBtnCombobox.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/RadioBtnCombobox.qml</file>
+    <file alias="RippleProgress.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/RippleProgress.qml</file>
+    <file alias="Sidebar.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/Sidebar.qml</file>
+    <file alias="SidebarItem.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/SidebarItem.qml</file>
+    <file alias="SkinItem.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/SkinItem.qml</file>
+    <file alias="SkinPage.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/SkinPage.qml</file>
+    <file alias="SliderProgress.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/SliderProgress.qml</file>
+    <file alias="SwitchBtn.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/SwitchBtn.qml</file>
+    <file alias="Table.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/Table.qml</file>
+    <file alias="TablePage.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/TablePage.qml</file>
+    <file alias="Page_MAP.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/Page_MAP.qml</file>
+    <file alias="Topbar.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/Topbar.qml</file>
+    <file alias="MenuItem_ZSJ1.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/MenuItem_ZSJ1.qml</file>
+    <file alias="TabItem_ZSJ1.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/TabItem_ZSJ1.qml</file>
+    <file alias="DrongItem.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/DrongItem.qml</file>
+    <file alias="canshusetPage.qml">D:/ZZZ_CESHI/ziyannewcc1_qml/canshusetPage.qml</file>
+  </qresource>
+</RCC>
+
