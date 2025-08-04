@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="qml.qrc">/root/Desktop/boatapp/qml.qrc</file>
+  </qresource>
+</RCC>
+

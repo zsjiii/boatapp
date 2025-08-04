@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_appziyannewcc1_qml_FILE /root/Desktop/boatapp/build/appziyannewcc1_qml)
+set(__QT_DEPLOY_TARGET_appziyannewcc1_qml_TYPE EXECUTABLE)

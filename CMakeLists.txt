@@ -7,7 +7,8 @@ set(CMAKE_AUTORCC ON)  # 关键！启用 Qt 资源编译
 set(CMAKE_BUILD_TYPE Debug)  # 确保为 Debug 构建
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0")  # 禁用优化，嵌入符号
 # 查找基础 Qt 组件
-set(CMAKE_PREFIX_PATH "D:/Qt/QT6/6.9.1/msvc2022_64")
+set(CMAKE_PREFIX_PATH /usr/lib/x86_64-linux-gnu/qt6)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 find_package(Qt6 REQUIRED COMPONENTS Core Quick Network SerialPort Multimedia Core5Compat WebEngineWidgets WebEngineQuick WebEngineCore)
 # find_package(Qt6 6.9.1 REQUIRED WebEngine WebEngineQuick WebEngineCore)
 # target_link_libraries(appziyannewcc1_qml PRIVATE
@@ -75,8 +76,8 @@ target_link_libraries(appziyannewcc1_qml
     Qt6::Core5Compat
 )
 include(GNUInstallDirs)
-install(TARGETS appziyannewcc1_qml
-    BUNDLE DESTINATION .
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-)
+# install(TARGETS appziyannewcc1_qml
+#     BUNDLE DESTINATION .
+#     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+#     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+# )

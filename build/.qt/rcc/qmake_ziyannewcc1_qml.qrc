@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/ziyannewcc1_qml">
+    <file alias="qmldir">/root/Desktop/boatapp/build/ziyannewcc1_qml/qmldir</file>
+  </qresource>
+</RCC>
+
