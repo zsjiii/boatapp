@@ -1,0 +1,12 @@
+-I
+D:/ZZZ_CESHI/ziyannewcc1_qml/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug
+-I
+D:/Qt/QT6/6.9.1/msvc2022_64/qml
+--resource
+D:/ZZZ_CESHI/ziyannewcc1_qml/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/PREFIX.qrc
+--resource
+D:/ZZZ_CESHI/ziyannewcc1_qml/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/qmake_ziyannewcc1_qml.qrc
+--resource
+D:/ZZZ_CESHI/ziyannewcc1_qml/build/Desktop_Qt_6_9_1_MSVC2022_64bit-Debug/.qt/rcc/appziyannewcc1_qml_raw_qml_0.qrc
+--module
+ziyannewcc1_qml

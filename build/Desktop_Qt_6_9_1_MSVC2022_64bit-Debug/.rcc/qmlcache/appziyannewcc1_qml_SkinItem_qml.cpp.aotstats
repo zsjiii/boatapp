@@ -1,0 +1,60 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 490,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 13
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 17,
+                        "durationMicroseconds": 286,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 14
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 17,
+                        "durationMicroseconds": 193,
+                        "errorMessage": "",
+                        "functionName": "radius",
+                        "line": 15
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 119,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 12
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 46,
+                        "durationMicroseconds": 192,
+                        "errorMessage": "",
+                        "functionName": "color",
+                        "line": 21
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 44,
+                        "durationMicroseconds": 162,
+                        "errorMessage": "",
+                        "functionName": "color",
+                        "line": 22
+                    }
+                ],
+                "filePath": "D:/ZZZ_CESHI/ziyannewcc1_qml/SkinItem.qml"
+            }
+        ],
+        "moduleId": "ziyannewcc1_qml(appziyannewcc1_qml)"
+    }
+]

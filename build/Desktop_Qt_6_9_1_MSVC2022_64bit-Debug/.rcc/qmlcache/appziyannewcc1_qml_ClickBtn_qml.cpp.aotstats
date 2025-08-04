@@ -1,0 +1,100 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 13,
+                        "durationMicroseconds": 940,
+                        "errorMessage": "",
+                        "functionName": "radius",
+                        "line": 12
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 12,
+                        "durationMicroseconds": 886,
+                        "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: conversion to QVariant -> QColor stored as QVariant",
+                        "functionName": "color",
+                        "line": 13
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 19,
+                        "durationMicroseconds": 385,
+                        "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: call to method lighter, returning QVariant -> QColor stored as QVariant",
+                        "functionName": "color",
+                        "line": 14
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 211,
+                        "errorMessage": "",
+                        "functionName": "style",
+                        "line": 21
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 15,
+                        "durationMicroseconds": 677,
+                        "errorMessage": "",
+                        "functionName": "text",
+                        "line": 23
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 111,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 17
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 242,
+                        "errorMessage": "",
+                        "functionName": "pixelSize",
+                        "line": 18
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 188,
+                        "errorMessage": "",
+                        "functionName": "onPressed",
+                        "line": 28
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 21,
+                        "durationMicroseconds": 161,
+                        "errorMessage": "",
+                        "functionName": "onReleased",
+                        "line": 29
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 557,
+                        "errorMessage": "",
+                        "functionName": "onClicked",
+                        "line": 30
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 110,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 27
+                    }
+                ],
+                "filePath": "D:/ZZZ_CESHI/ziyannewcc1_qml/ClickBtn.qml"
+            }
+        ],
+        "moduleId": "ziyannewcc1_qml(appziyannewcc1_qml)"
+    }
+]
