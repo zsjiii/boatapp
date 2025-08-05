@@ -18,5 +18,7 @@
         <file>res/table.png</file>
         <file>res/title.png</file>
     </qresource>
-    <qresource prefix="/"/>
+    <qresource prefix="/">
+        <file>res/demo02.html</file>
+    </qresource>
 </RCC>

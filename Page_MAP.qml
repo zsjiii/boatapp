@@ -1,32 +1,32 @@
 import QtQuick
 import QtQuick.Window 2.15
-import QtWebView 1.1  // 使用WebView替代WebEngine
-import QtWebEngine 6.8
+import QtWebView 1.15  // 使用WebView替代WebEngine
+//import QtWebEngine 6.8
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtMultimedia 6.4
 Item {
     // 地图显示区域
-    WebEngineView  {
+    WebView  {
         id: webView
-        settings.localContentCanAccessRemoteUrls: true
-        settings.localContentCanAccessFileUrls: true
+        //settings.localContentCanAccessRemoteUrls: true
+        //settings.localContentCanAccessFileUrls: true
         // 如果加载的HTML需要访问其他本地文件，还需要设置
-        settings.allowWindowActivationFromJavaScript: true
-        settings.allowGeolocationOnInsecureOrigins: true
+        //settings.allowWindowActivationFromJavaScript: true
+        //settings.allowGeolocationOnInsecureOrigins: true
         anchors.fill: parent
-        url: "file:///D:/ANJI_NEW/QINGDAO730_anji/build-fem_km9-Desktop_Qt_5_12_2_MSVC2017_64bit-Debug/bmap_offline_demo/demo02.html"  // 使用file协议和相对路径
+        url: Qt.resolvedUrl("qrc:/res/demo02.html")  // 使用file协议和相对路径
 
         onLoadingChanged: {
             if (loadRequest.errorString)
                 console.error("加载错误:", loadRequest.errorString)
         }
-        WebEngineProfile {
+        /*WebEngineProfile {
             id: mapProfile
             persistentStoragePath: "./webengine_cache"
             httpCacheType: WebEngineProfile.DiskHttpCache
             persistentCookiesPolicy: WebEngineProfile.AllowPersistentCookies
-        }
+        }*/
     }
 
     // 悬浮视频界面 - 覆盖在主界面上方

@@ -9,7 +9,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0")  # 禁用优化，嵌入符号
 # 查找基础 Qt 组件
 set(CMAKE_PREFIX_PATH /usr/lib/x86_64-linux-gnu/qt6)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-find_package(Qt6 REQUIRED COMPONENTS Core Quick Network SerialPort Multimedia Core5Compat WebEngineWidgets WebEngineQuick WebEngineCore)
+find_package(Qt6 REQUIRED COMPONENTS Core Quick Network SerialPort Multimedia Core5Compat WebView) #WebEngineWidgets WebEngineQuick WebEngineCore)
 # find_package(Qt6 6.9.1 REQUIRED WebEngine WebEngineQuick WebEngineCore)
 # target_link_libraries(appziyannewcc1_qml PRIVATE
 #     Qt6::WebEngine
@@ -74,6 +74,7 @@ target_link_libraries(appziyannewcc1_qml
     Qt6::SerialPort
     Qt6::Multimedia
     Qt6::Core5Compat
+    Qt6::WebView
 )
 include(GNUInstallDirs)
 # install(TARGETS appziyannewcc1_qml
