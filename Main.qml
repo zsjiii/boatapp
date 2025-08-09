@@ -72,7 +72,7 @@ Window{
             id: sidebar
             width: sidebarChecked || mainWindow.visibility == mainWindow.Maximized || mainWindow.isHalfScreen ? 40 : 40
             height: parent.height - topbar.height
-            anchors.top: parent.top
+            anchors.top: titleBar.bottom
             onCurrentIndexChanged: pages.pageIndex = currentIndex//这里链接着侧边栏图标和pages页面的切换
             backTopColor: mainWindow.backTopColor
             backBottomColor: mainWindow.backBottomColor
@@ -80,7 +80,7 @@ Window{
         // 标题栏
         Item{
             id: titleBar
-            anchors.left: sidebar.right  // 左侧对齐 Sidebar 右侧
+            anchors.left: parent.left  // 左侧对齐 Sidebar 右侧
             anchors.right: parent.right  // 右侧对齐父项
             anchors.top: parent.top      // 顶部对齐父项（不再依赖 topbar）
             //width: parent.width - topbar.width
@@ -109,24 +109,63 @@ Window{
             //         onClicked: mainWindow.isBody = !mainWindow.isBody
             //     }
             // }
+
             //下拉菜单
-            MenuItem_ZSJ1 {
-                id: zsjcaidanceshi_titlebar
+            //MenuItem_ZSJ1 {
+            //    id: zsjcaidanceshi_titlebar
+            //    anchors.left: parent.left
+            //    //anchors.centerIn: parent
+            //    //Layout.preferredWidth: itemwidth
+            //    //Layout.fillHeight: true
+            //    selectedSubItem: "控制模式"
+            //    // menuText: modelData.name
+            //    // menuIcon: modelData.icon
+            //    // itemColor: modelData.color
+            //    // hasDropdown: modelData.hasDropdown
+            //    isActive: true //index === root.currentIndex
+            //}
+
+            Row {
+                id: icon
+                //width: itemwidth*2
                 anchors.left: parent.left
-                //anchors.centerIn: parent
-                //Layout.preferredWidth: itemwidth
+                width:150
+                height: parent.height
+                //Layout.preferredWidth:Math.max(itemwidth, 150)
                 //Layout.fillHeight: true
-                selectedSubItem: "控制模式"
-                // menuText: modelData.name
-                // menuIcon: modelData.icon
-                // itemColor: modelData.color
-                // hasDropdown: modelData.hasDropdown
-                isActive: true //index === root.currentIndex
+                //anchors.leftMargin: 20
+                //anchors.verticalCenter: parent.verticalCenter
+                //spacing: 0
+                // 图标
+                Image {
+                    id: logo
+                    height: parent.height
+                    width: parent.height //parent.width/2
+                    source: "qrc:/image/res/bilibili.png"
+                    // onStatusChanged: {
+                    //     if (status === Image.Ready) {
+                    //         console.log("Image loaded successfully");
+                    //     } else if (status === Image.Error) {
+                    //         console.log("Image failed to load:", icon.source);
+                    //         console.log("Error string:", icon.errorString());
+                    //     }
+                    // }
+                }
+                Text {
+                    text: "天宇智远"
+                    width:parent.width/2
+                    color: "white"
+                    font.pixelSize: 16
+                    font.bold: true
+                    //anchors.verticalCenter: parent.verticalCenter
+                }
             }
+
 
             // 拖动条
             Item {
-                anchors.left: zsjcaidanceshi_titlebar.right
+                //anchors.left: zsjcaidanceshi_titlebar.right
+                anchors.left: icon.right
                 anchors.right: canshusetBtn.left //closeBtn.left
                 anchors.top: parent.top
                 anchors.bottom: parent.bottom

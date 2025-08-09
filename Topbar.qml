@@ -66,54 +66,54 @@ Item {
         spacing: 0  // 取消默认间距
 
         // 应用Logo和标题
-        Row {
-            id: appHeader
-            //width: itemwidth*2
-            //anchors.left: parent.left
-            Layout.preferredWidth:Math.max(itemwidth, 150)
-            Layout.fillHeight: true
-            //anchors.leftMargin: 20
-            //anchors.verticalCenter: parent.verticalCenter
-            //spacing: 0
-            // 图标
-            Image {
-                id: logo
-                height: parent.height
-                width: parent.height//parent.width/2
-                source: "qrc:/image/res/bilibili.png"
-                // onStatusChanged: {
-                //     if (status === Image.Ready) {
-                //         console.log("Image loaded successfully");
-                //     } else if (status === Image.Error) {
-                //         console.log("Image failed to load:", icon.source);
-                //         console.log("Error string:", icon.errorString());
-                //     }
-                // }
-            }
-            Text {
-                text: "天宇智远"
-                width:parent.width/2
-                color: "white"
-                font.pixelSize: 16
-                font.bold: true
-                //anchors.verticalCenter: parent.verticalCenter
-            }
-        }
+        //Row {
+        //    id: appHeader
+        //    //width: itemwidth*2
+        //    //anchors.left: parent.left
+        //    Layout.preferredWidth:Math.max(itemwidth, 150)
+        //    Layout.fillHeight: true
+        //    //anchors.leftMargin: 20
+        //    //anchors.verticalCenter: parent.verticalCenter
+        //    //spacing: 0
+        //    // 图标
+        //    Image {
+        //        id: logo
+        //        height: parent.height
+        //        width: parent.height//parent.width/2
+        //        source: "qrc:/image/res/bilibili.png"
+        //        // onStatusChanged: {
+        //        //     if (status === Image.Ready) {
+        //        //         console.log("Image loaded successfully");
+        //        //     } else if (status === Image.Error) {
+        //        //         console.log("Image failed to load:", icon.source);
+        //        //         console.log("Error string:", icon.errorString());
+        //        //     }
+        //        // }
+        //    }
+        //    Text {
+        //        text: "天宇智远"
+        //        width:parent.width/2
+        //        color: "white"
+        //        font.pixelSize: 16
+        //        font.bold: true
+        //        //anchors.verticalCenter: parent.verticalCenter
+        //    }
+        //}
 
-        MenuItem_ZSJ1 {
-            id: zsjcaidanceshi
-            //anchors.left: appHeader.right
-            //anchors.centerIn: parent
-            //spacing: 10
-            Layout.preferredWidth: itemwidth
-            Layout.fillHeight: true
-            selectedSubItem: "控制模式"
-            // menuText: modelData.name
-            // menuIcon: modelData.icon
-            // itemColor: modelData.color
-            // hasDropdown: modelData.hasDropdown
-            isActive: false //index === root.currentIndex
-        }
+        //MenuItem_ZSJ1 {
+        //    id: zsjcaidanceshi
+        //    //anchors.left: appHeader.right
+        //    //anchors.centerIn: parent
+        //    //spacing: 10
+        //    Layout.preferredWidth: itemwidth
+        //    Layout.fillHeight: true
+        //    selectedSubItem: "控制模式"
+        //    // menuText: modelData.name
+        //    // menuIcon: modelData.icon
+        //    // itemColor: modelData.color
+        //    // hasDropdown: modelData.hasDropdown
+        //    isActive: false //index === root.currentIndex
+        //}
 
         // // 用户区域
         // Row {
