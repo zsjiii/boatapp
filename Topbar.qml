@@ -60,171 +60,217 @@ Item {
         // }
     }
 
-    // 应用Logo和标题
-    Row {
-        id: appHeader
-        //width: itemwidth*2
-        anchors.left: parent.left
-        width:Math.max(itemwidth, 150)
-        //anchors.leftMargin: 20
-        //anchors.verticalCenter: parent.verticalCenter
-        spacing: 0
-        // 图标
-        Image {
-            id: logo
-            height: parent.height
-            width:parent.width/2
-            source: "qrc:/image/res/bilibili.png"
-            // onStatusChanged: {
-            //     if (status === Image.Ready) {
-            //         console.log("Image loaded successfully");
-            //     } else if (status === Image.Error) {
-            //         console.log("Image failed to load:", icon.source);
-            //         console.log("Error string:", icon.errorString());
-            //     }
-            // }
-        }
-        Text {
-            text: "天宇智远"
-            width:parent.width/2
-            color: "white"
-            font.pixelSize: 16
-            font.bold: true
-            //anchors.verticalCenter: parent.verticalCenter
-        }
-    }
+    RowLayout {
+        id: mainLayout
+        anchors.fill: parent
+        spacing: 0  // 取消默认间距
 
-    MenuItem_ZSJ1 {
-        id: zsjcaidanceshi
-        anchors.left: appHeader.right
-        //anchors.centerIn: parent
-        width: itemwidth
-        selectedSubItem: "控制模式"
-        // menuText: modelData.name
-        // menuIcon: modelData.icon
-        // itemColor: modelData.color
-        // hasDropdown: modelData.hasDropdown
-        isActive: index === root.currentIndex
-    }
-
-    // // 用户区域
-    // Row {
-    //     id: userArea
-    //     anchors.right: parent.right
-    //     anchors.rightMargin: 20
-    //     anchors.verticalCenter: parent.verticalCenter
-    //     spacing: 15
-
-    //     // 通知图标
-    //     Rectangle {
-    //         width: 36
-    //         height: 36
-    //         radius: 18
-    //         color: "#34495e"
-
-    //         Text {
-    //             text: "🔔"
-    //             font.pixelSize: 18
-    //             anchors.centerIn: parent
-    //         }
-
-    //         // 通知标记
-    //         Rectangle {
-    //             width: 12
-    //             height: 12
-    //             radius: 6
-    //             color: "#e74c3c"
-    //             anchors.top: parent.top
-    //             anchors.right: parent.right
-    //             anchors.margins: -2
-    //             visible: true
-    //         }
-    //     }
-
-    //     // 用户头像
-    //     Rectangle {
-    //         width: 40
-    //         height: 40
-    //         radius: 20
-    //         color: "#3498db"
-
-    //         Image {
-    //             source: "https://randomuser.me/api/portraits/men/32.jpg"
-    //             anchors.fill: parent
-    //             fillMode: Image.PreserveAspectCrop
-    //             layer.enabled: true
-    //             layer.effect: OpacityMask {
-    //                 maskSource: Rectangle {
-    //                     width: parent.width
-    //                     height: parent.height
-    //                     radius: width/2
-    //                 }
-    //             }
-    //         }
-    //     }
-
-    //     // 用户名和下拉箭头
-    //     Column {
-    //         anchors.verticalCenter: parent.verticalCenter
-
-    //         Text {
-    //             text: "John Smith"
-    //             color: "white"
-    //             font.pixelSize: 14
-    //         }
-
-    //         Text {
-    //             text: "管理员"
-    //             color: "#bdc3c7"
-    //             font.pixelSize: 12
-    //         }
-    //     }
-
-    //     Text {
-    //         text: "▼"
-    //         color: "white"
-    //         font.pixelSize: 12
-    //         anchors.verticalCenter: parent.verticalCenter
-    //     }
-    // }
-
-    // 页面标签区域
-    Rectangle {
-        id: tabBar
-        anchors.left: zsjcaidanceshi.right
-        //anchors.centerIn: parent
-        width:Math.max(itemwidth*3, 100)
-        height: parent.height
-        anchors.top: background.top
-        anchors.bottom:  background.bottom
-        color: "#f8f9fa"
-        //visible: root.menuExpanded
-
-        // 标签项
+        // 应用Logo和标题
         Row {
-            anchors.fill: parent
+            id: appHeader
+            //width: itemwidth*2
+            //anchors.left: parent.left
+            Layout.preferredWidth:Math.max(itemwidth, 150)
+            Layout.fillHeight: true
             //anchors.leftMargin: 20
-            spacing: 0
-
-            TabItem_ZSJ1 {
-                tabTitle: "电量"
-                tabIcon: ""
-                tabDescription: "0"
-                isActive: true
+            //anchors.verticalCenter: parent.verticalCenter
+            //spacing: 0
+            // 图标
+            Image {
+                id: logo
+                height: parent.height
+                width: parent.height//parent.width/2
+                source: "qrc:/image/res/bilibili.png"
+                // onStatusChanged: {
+                //     if (status === Image.Ready) {
+                //         console.log("Image loaded successfully");
+                //     } else if (status === Image.Error) {
+                //         console.log("Image failed to load:", icon.source);
+                //         console.log("Error string:", icon.errorString());
+                //     }
+                // }
             }
-
-            TabItem_ZSJ1 {
-                tabTitle: "经纬度"
-                tabIcon: ""
-                tabDescription: "120"
-            }
-
-            TabItem_ZSJ1 {
-                tabTitle: "连接状态"
-                tabIcon: ""
-                tabDescription: "正常"
+            Text {
+                text: "天宇智远"
+                width:parent.width/2
+                color: "white"
+                font.pixelSize: 16
+                font.bold: true
+                //anchors.verticalCenter: parent.verticalCenter
             }
         }
+
+        MenuItem_ZSJ1 {
+            id: zsjcaidanceshi
+            //anchors.left: appHeader.right
+            //anchors.centerIn: parent
+            //spacing: 10
+            Layout.preferredWidth: itemwidth
+            Layout.fillHeight: true
+            selectedSubItem: "控制模式"
+            // menuText: modelData.name
+            // menuIcon: modelData.icon
+            // itemColor: modelData.color
+            // hasDropdown: modelData.hasDropdown
+            isActive: false //index === root.currentIndex
+        }
+
+        // // 用户区域
+        // Row {
+        //     id: userArea
+        //     anchors.right: parent.right
+        //     anchors.rightMargin: 20
+        //     anchors.verticalCenter: parent.verticalCenter
+        //     spacing: 15
+
+        //     // 通知图标
+        //     Rectangle {
+        //         width: 36
+        //         height: 36
+        //         radius: 18
+        //         color: "#34495e"
+
+        //         Text {
+        //             text: "🔔"
+        //             font.pixelSize: 18
+        //             anchors.centerIn: parent
+        //         }
+
+        //         // 通知标记
+        //         Rectangle {
+        //             width: 12
+        //             height: 12
+        //             radius: 6
+        //             color: "#e74c3c"
+        //             anchors.top: parent.top
+        //             anchors.right: parent.right
+        //             anchors.margins: -2
+        //             visible: true
+        //         }
+        //     }
+
+        //     // 用户头像
+        //     Rectangle {
+        //         width: 40
+        //         height: 40
+        //         radius: 20
+        //         color: "#3498db"
+
+        //         Image {
+        //             source: "https://randomuser.me/api/portraits/men/32.jpg"
+        //             anchors.fill: parent
+        //             fillMode: Image.PreserveAspectCrop
+        //             layer.enabled: true
+        //             layer.effect: OpacityMask {
+        //                 maskSource: Rectangle {
+        //                     width: parent.width
+        //                     height: parent.height
+        //                     radius: width/2
+        //                 }
+        //             }
+        //         }
+        //     }
+
+        //     // 用户名和下拉箭头
+        //     Column {
+        //         anchors.verticalCenter: parent.verticalCenter
+
+        //         Text {
+        //             text: "John Smith"
+        //             color: "white"
+        //             font.pixelSize: 14
+        //         }
+
+        //         Text {
+        //             text: "管理员"
+        //             color: "#bdc3c7"
+        //             font.pixelSize: 12
+        //         }
+        //     }
+
+        //     Text {
+        //         text: "▼"
+        //         color: "white"
+        //         font.pixelSize: 12
+        //         anchors.verticalCenter: parent.verticalCenter
+        //     }
+        // }
+
+        // 页面标签区域
+        Rectangle {
+            id: tabBar
+            //anchors.left: zsjcaidanceshi.right
+            //anchors.centerIn: parent
+            Layout.preferredWidth:Math.max(itemwidth*3, 100)
+            Layout.fillHeight: true
+            //height: parent.height
+            //anchors.top: background.top
+            //anchors.bottom:  background.bottom
+            color: "#f8f9fa"
+            //visible: root.menuExpanded
+
+            // 标签项
+            Row {
+                anchors.fill: parent
+                //anchors.leftMargin: 20
+                spacing: 0
+
+                TabItem_ZSJ1 {
+                    tabTitle: "连接状态(地面站)"
+                    tabIcon: ""
+                    tabDescription: "正常"
+                }
+
+                TabItem_ZSJ1 {
+                    tabTitle: "解锁状态"
+                    tabIcon: ""
+                    tabDescription: "正常"
+                }
+
+                TabItem_ZSJ1 {
+                    tabTitle: "航线状态"
+                    tabIcon: ""
+                    tabDescription: "正常"
+                }
+
+                TabItem_ZSJ1 {
+                    tabTitle: "水深"
+                    tabIcon: ""
+                    tabDescription: "0"
+                    isActive: true
+                }
+
+                TabItem_ZSJ1 {
+                    tabTitle: "电量"
+                    tabIcon: ""
+                    tabDescription: "0"
+                    isActive: true
+                }
+
+                TabItem_ZSJ1 {
+                    tabTitle: "油量"
+                    tabIcon: ""
+                    tabDescription: "0"
+                    isActive: true
+                }
+
+                TabItem_ZSJ1 {
+                    tabTitle: "距离"
+                    tabIcon: ""
+                    tabDescription: "0"
+                    isActive: true
+                }
+
+                TabItem_ZSJ1 {
+                    tabTitle: "经纬度"
+                    tabIcon: ""
+                    tabDescription: "120"
+                }
+
+            }
+        }
+        // 4. 空白填充（可选）
+        Item { Layout.fillWidth: true } // 如果不需要右侧拉伸可以删除
     }
 
     // 文件下拉菜单

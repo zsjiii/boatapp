@@ -8,6 +8,7 @@
 int main(int argc, char *argv[])
 {
     // 强制使用特定 OpenGL 版本
+    qputenv("QTWEBENGINE_CHROMIUM_FLAGS", "--no-sandbox");
     qputenv("QT_OPENGL", "desktop");
     QGuiApplication a(argc, argv);
 
@@ -39,10 +40,10 @@ int main(int argc, char *argv[])
     } else {
         qDebug() << "资源未找到!";
     }
-    QDirIterator it(":", QDirIterator::Subdirectories);
-    while (it.hasNext()) {
-        qDebug() << "Resource path:" << it.next();
-    }
+    // QDirIterator it(":", QDirIterator::Subdirectories);
+    // while (it.hasNext()) {
+    //     qDebug() << "Resource path:" << it.next();
+    // }
     // 获取 Page2 对象
     // QObject *rootObject = engine.rootObjects().first();
     // page2 = rootObject->findChild<QObject*>("Page2");

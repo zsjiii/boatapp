@@ -199,7 +199,7 @@ Item {
                         anchors.centerIn: parent
                         color: "green"
                         text: {
-                            var childData = parent.subModel[modelData];
+                            var childData = menuItem.subModel[modelData];
                             if (childData !== undefined &&
                                ((Array.isArray(childData) && childData.length > 0) ||
                                 (typeof childData === "object" && Object.keys(childData).length > 0))) {
@@ -211,7 +211,7 @@ Item {
                     MouseArea {
                         anchors.fill: parent
                         onClicked: {
-                            var childData = parent.subModel[modelData];
+                            var childData = menuItem.subModel[modelData];
                             if (childData !== undefined &&
                                ((Array.isArray(childData) && childData.length > 0) ||
                                 (typeof childData === "object" && Object.keys(childData).length > 0))) {

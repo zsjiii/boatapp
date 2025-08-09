@@ -45,7 +45,7 @@ qt_add_qml_module(appziyannewcc1_qml
         QML_FILES Page1.qml
         QML_FILES Page2.qml
         QML_FILES Page3.qml
-        QML_FILES Button_ZSJ1.qml
+        QML_FILES Button_ZSJ1.qml LabeledSlider.qml
         QML_FILES AreaEdit.qml BtnsPage.qml CheckBtn.qml CircleProgress.qml ClickBtn.qml EditPage.qml Instrument.qml LineEdit.qml Pages.qml ProgressesPage.qml RadioBtnCombobox.qml RippleProgress.qml Sidebar.qml SidebarItem.qml SkinItem.qml SkinPage.qml SliderProgress.qml SwitchBtn.qml Table.qml TablePage.qml
         QML_FILES Page_MAP.qml
         QML_FILES Topbar.qml

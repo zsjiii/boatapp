@@ -9,6 +9,7 @@ Item {
     // 地图显示区域
     WebView  {
         id: webView
+        //z: -100
         //settings.localContentCanAccessRemoteUrls: true
         //settings.localContentCanAccessFileUrls: true
         // 如果加载的HTML需要访问其他本地文件，还需要设置
@@ -21,19 +22,19 @@ Item {
             if (loadRequest.errorString)
                 console.error("加载错误:", loadRequest.errorString)
         }
-        /*WebEngineProfile {
-            id: mapProfile
-            persistentStoragePath: "./webengine_cache"
-            httpCacheType: WebEngineProfile.DiskHttpCache
-            persistentCookiesPolicy: WebEngineProfile.AllowPersistentCookies
-        }*/
+        //WebEngineProfile {
+        //    id: mapProfile
+        //    persistentStoragePath: "./webengine_cache"
+        //    httpCacheType: WebEngineProfile.DiskHttpCache
+        //    persistentCookiesPolicy: WebEngineProfile.AllowPersistentCookies
+        //}
     }
 
     // 悬浮视频界面 - 覆盖在主界面上方
     Rectangle {
         id: videoOverlay
-        x: 20
-        y: 20
+        x: window.width *4 / 5 //- 20
+        y: window.height *2 / 3 //- 20
         width: 320
         height: 240
         color: "#1a1a1a"
@@ -48,6 +49,12 @@ Item {
         //     samples: 16
         //     color: "#80000000"
         // }
+
+        // 拖动功能
+        DragHandler {
+            id: dragHandler
+            target: videoOverlay
+        }
 
         // 视频标题栏
         Rectangle {
@@ -125,6 +132,43 @@ Item {
                 anchors.centerIn: parent
             }
         }
+
+        // 点击切换内容
+        TapHandler {
+            onTapped: {
+                // 交换
+            }
+        }
+
+        // 跟随主窗口移动
+        property point relativePosition: Qt.point(x/mainWindow.width, y/mainWindow.height)
+
+        // 统一处理位置变化
+        onXChanged: {
+            // 边界检查
+            if (x < 0) x = 0
+            if (x > mainWindow.width - width) x = mainWindow.width - width
+            // 更新相对位置
+            relativePosition = Qt.point(x/mainWindow.width, y/mainWindow.height)
+        }
+        
+        onYChanged: {
+            // 边界检查
+            if (y < 0) y = 0
+            if (y > mainWindow.height - height) y = mainWindow.height - height
+            // 更新相对位置
+            relativePosition = Qt.point(x/mainWindow.width, y/mainWindow.height)
+        }
+
+        //Connections {
+        //    target: mainWindow
+        //    function onWidthChanged() {
+        //        videoOverlay.x = videoOverlay.relativePosition.x * mainWindow.width
+        //    }
+        //    function onHeightChanged() {
+        //        videoOverlay.y = videoOverlay.relativePosition.y * mainWindow.height
+        //    }
+        //}
     }
 
 }

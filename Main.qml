@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Window
+import QtQuick.Controls
 
 // 自定义无边框窗口
 /*
@@ -58,8 +59,10 @@ Window{
         Topbar{
             id: topbar
             anchors.left: parent.left
+            anchors.bottom: parent.bottom
             width: parent.width - parent.width/8
             height: parent.height/20
+            z: 1
             //onCurrentIndexChanged: pages.pageIndex = currentIndex//这里链接着侧边栏图标和pages页面的切换
             backTopColor: mainWindow.backTopColor
             backBottomColor: mainWindow.backBottomColor
@@ -69,7 +72,7 @@ Window{
             id: sidebar
             width: sidebarChecked || mainWindow.visibility == mainWindow.Maximized || mainWindow.isHalfScreen ? 40 : 40
             height: parent.height - topbar.height
-            anchors.top: topbar.bottom
+            anchors.top: parent.top
             onCurrentIndexChanged: pages.pageIndex = currentIndex//这里链接着侧边栏图标和pages页面的切换
             backTopColor: mainWindow.backTopColor
             backBottomColor: mainWindow.backBottomColor
@@ -77,8 +80,10 @@ Window{
         // 标题栏
         Item{
             id: titleBar
-            anchors.left: topbar.right
-            width: parent.width - topbar.width
+            anchors.left: sidebar.right  // 左侧对齐 Sidebar 右侧
+            anchors.right: parent.right  // 右侧对齐父项
+            anchors.top: parent.top      // 顶部对齐父项（不再依赖 topbar）
+            //width: parent.width - topbar.width
             height: 50
 
             // //主题
@@ -104,38 +109,25 @@ Window{
             //         onClicked: mainWindow.isBody = !mainWindow.isBody
             //     }
             // }
-            // 设置按钮
-            Item{
-                id: canshusetBtn
-                width: titleBar.height
-                height: titleBar.height
-                //anchors.left: skinBtn.right
-
-                Text {
-                    anchors.fill: parent
-                    text: "⚙️"
-                    font.pixelSize: 20
-                }
-
-                MouseArea{
-                    anchors.fill: parent
-                    onClicked: {
-                        // 创建并显示设置窗口
-                        var component = Qt.createComponent("canshusetPage.qml")
-                        if (component.status === Component.Ready) {
-                            let settingsWin = component.createObject(mainWindow)
-                            settingsWin.show()
-                        } else {
-                            console.error("创建设置窗口错误:", component.errorString())
-                        }
-                    }
-
-                }
+            //下拉菜单
+            MenuItem_ZSJ1 {
+                id: zsjcaidanceshi_titlebar
+                anchors.left: parent.left
+                //anchors.centerIn: parent
+                //Layout.preferredWidth: itemwidth
+                //Layout.fillHeight: true
+                selectedSubItem: "控制模式"
+                // menuText: modelData.name
+                // menuIcon: modelData.icon
+                // itemColor: modelData.color
+                // hasDropdown: modelData.hasDropdown
+                isActive: true //index === root.currentIndex
             }
+
             // 拖动条
             Item {
-                anchors.left: canshusetBtn.right
-                anchors.right: closeBtn.left
+                anchors.left: zsjcaidanceshi_titlebar.right
+                anchors.right: canshusetBtn.left //closeBtn.left
                 anchors.top: parent.top
                 anchors.bottom: parent.bottom
 
@@ -195,6 +187,35 @@ Window{
                     onDoubleClicked: mainWindow.visibility == mainWindow.Maximized ? mainWindow.showNormal() : mainWindow.showMaximized()
                 }
             }
+            // 设置按钮
+            Item{
+                id: canshusetBtn
+                width: titleBar.height
+                height: titleBar.height
+                anchors.right: closeBtn.left
+                //anchors.left: skinBtn.right
+
+                Text {
+                    anchors.fill: parent
+                    text: "⚙️"
+                    font.pixelSize: 30
+                }
+
+                MouseArea{
+                    anchors.fill: parent
+                    onClicked: {
+                        // 创建并显示设置窗口
+                        var component = Qt.createComponent("canshusetPage.qml")
+                        if (component.status === Component.Ready) {
+                            let settingsWin = component.createObject(mainWindow)
+                            settingsWin.show()
+                        } else {
+                            console.error("创建设置窗口错误:", component.errorString())
+                        }
+                    }
+
+                }
+            }
 
             // 关闭按钮
             Item{
@@ -211,6 +232,68 @@ Window{
                 MouseArea{
                     anchors.fill: parent
                     onClicked: mainWindow.close()
+                }
+            }
+        }
+
+        Row {
+            spacing: 30  // 控制菜单之间的间距
+            anchors.left: sidebar.right  // 左侧对齐 Sidebar 右侧
+            anchors.right: parent.right  // 右侧对齐父项
+            anchors.top: titleBar.bottom      // 顶部对齐父项（不再依赖 topbar）
+            z: 1
+
+            // 无人控制切换菜单
+            Row {
+                spacing: 10
+                Label {
+                    text: "控制模式:"
+                    anchors.verticalCenter: parent.verticalCenter
+                }
+                ComboBox {
+                    id: controlModeCombo
+                    width: 150
+                    model: ["有人控制", "无人控制"]
+                    currentIndex: 0
+                    onCurrentIndexChanged: {
+                        console.log("控制模式更改为:", model[currentIndex])
+                    }
+                }
+            }
+
+            // 动力类型切换菜单
+            Row {
+                spacing: 10
+                Label {
+                    text: "动力类型:"
+                    anchors.verticalCenter: parent.verticalCenter
+                }
+                ComboBox {
+                    id: powerTypeCombo
+                    width: 150
+                    model: ["电推", "油机"]
+                    currentIndex: 0
+                    onCurrentIndexChanged: {
+                        console.log("动力类型更改为:", model[currentIndex])
+                    }
+                }
+            }
+
+            // 摄像头切换菜单
+            Row {
+                spacing: 10
+                Label {
+                    text: "摄像头:"
+                    anchors.verticalCenter: parent.verticalCenter
+                }
+                ComboBox {
+                    id: cameraCombo
+                    width: 150
+                    model: ["前", "后", "左", "右"]
+                    currentIndex: 0
+                    onCurrentIndexChanged: {
+                        console.log("摄像头切换为:", model[currentIndex])
+                    }
                 }
             }
         }
@@ -235,12 +318,13 @@ Window{
         // 主体
         Pages{
             id: pages
+            //z: -1
             anchors.left: sidebar.right
             //width: parent.width - sidebar.width
             //anchors.left: parent.left
             anchors.right: parent.right
             anchors.top: titleBar.bottom
-            anchors.bottom: parent.bottom
+            anchors.bottom: topbar.bottom
             visible: mainWindow.isBody
             clip: true
         }
