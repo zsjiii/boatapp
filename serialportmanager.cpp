@@ -1,11 +1,12 @@
-﻿#include "serialportmanager.h"
+﻿#include "udpmanager.h"
+#include "serialportmanager.h"
 #include <QQmlApplicationEngine>
 #include <cstdio>
 extern BOAT_INFO1 zh_info;
 extern QObject *page2;
 SerialPortManager::SerialPortManager(QObject *parent) : QObject(parent)
 {
-    m_udpmode = new UdpManager();
+    m_udpmode = &UdpManager::instance();
     m_serial = new QSerialPort(this);
     connect(m_serial, &QSerialPort::readyRead, this, &SerialPortManager::onReadyRead);
     connect(this,&SerialPortManager::udpOut_signal,m_udpmode,&UdpManager::slot_sendData);
@@ -114,7 +115,7 @@ void SerialPortManager::onReadyRead()
             m_data.remove(0,42);
         }
         else
-        {   if(m_data.count())
+        {   if(m_data.size())
                 m_data.remove(0,1);
             else {
                 qDebug()<<"no serial data"<<Qt::endl;

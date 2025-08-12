@@ -3,9 +3,17 @@
 #include "define.h"
 #include "crc16.h"
 BOAT_INFO1 zh_info;
-UdpManager::UdpManager(QObject *parent) : QObject(parent)
+
+// C++11保证静态局部变量初始化是线程安全的
+UdpManager& UdpManager::instance()
 {
-    m_udpSocket = new QUdpSocket(this);
+    static UdpManager instance;
+    return instance;
+}
+
+UdpManager::UdpManager(QObject *parent) : QObject(parent) 
+{
+    m_udpSocket = new QUdpSocket(this);  // 关键：设置父对象
     connect(m_udpSocket, &QUdpSocket::readyRead, this, &UdpManager::onReadyRead);
 }
 

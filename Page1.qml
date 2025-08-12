@@ -3,7 +3,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import SerialPort 1.0
-import Network 1.0
+//import Network 1.0
 
 Page {
 
@@ -122,13 +122,14 @@ Page {
         }
 
 
-        // 添加UDP管理器实例
-        UdpManager {
-            id: udpManager
-            onDataReceived: {
+        //添加UDP管理器实例
+        Component.onCompleted: {
+            // 连接信号（注意单例的信号需要这样连接）
+            UdpManager.dataReceived.connect(function(data, sender, port) {
                 console.log("收到UDP数据:", data, "来自:", sender, port)
-            }
+            })
         }
+
         SerialPortManager {
             id: serialPort
             onDataReceived: {

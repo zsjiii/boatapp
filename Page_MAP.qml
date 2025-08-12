@@ -16,7 +16,7 @@ Item {
         //settings.allowWindowActivationFromJavaScript: true
         //settings.allowGeolocationOnInsecureOrigins: true
         anchors.fill: parent
-        url: Qt.resolvedUrl("qrc:/res/demo02.html")  // 使用file协议和相对路径
+        url: "file:///media/root/43550A4FB5A99DFE/lin3588/ziyanexe/bmap_offline_demo/demo01.html"  // 使用file协议和相对路径
 
         onLoadingChanged: {
             if (loadRequest.errorString)

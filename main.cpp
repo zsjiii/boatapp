@@ -1,4 +1,5 @@
 #include <QGuiApplication>
+#include <QQmlContext>
 #include <QQmlApplicationEngine>
 #include "serialportmanager.h"
 #include "udpmanager.h"
@@ -22,6 +23,16 @@ int main(int argc, char *argv[])
 
     // If you do not need a running Qt event loop, remove the call
     // to  exec() or use the Non-Qt Plain C++ Application template.
+
+    // 注册UDP管理器
+    //qmlRegisterType<UdpManager>("Network", 1, 0, "UdpManager");
+    // qmlRegisterSingletonType<UdpManager>("Network", 1, 0, "UdpManager", 
+    // [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject* {
+    //     Q_UNUSED(engine)
+    //     Q_UNUSED(scriptEngine)
+    //     return &UdpManager::instance();
+    // });
+
     QQmlApplicationEngine engine;
     QObject::connect(
         &engine,
@@ -29,6 +40,7 @@ int main(int argc, char *argv[])
         &a,
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
+    engine.rootContext()->setContextProperty("udpManager", &UdpManager::instance());
 
 
     // 检查屏幕数量
@@ -55,9 +67,19 @@ int main(int argc, char *argv[])
     // 注册串口管理器
     qmlRegisterType<SerialPortManager>("SerialPort", 1, 0, "SerialPortManager");
 
-    // 注册UDP管理器
-    qmlRegisterType<UdpManager>("Network", 1, 0, "UdpManager");
     engine.loadFromModule("ziyannewcc1_qml", "Main");
-    UdpManager myudp(NULL);
+
+    // 打印生命周期标记
+    // qDebug() << "Application running...";
+
+    //UdpManager myudp(NULL);
+
+    // qDebug() << "Application about to quit";
+
+    // 在main()返回前添加
+    // qDebug() << "----- Object Tree -----";
+    // QObject *obj = new QObject();
+    // obj->dumpObjectTree();  // 正确
+
     return a.exec();
 }

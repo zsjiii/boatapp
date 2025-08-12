@@ -9,7 +9,16 @@ class UdpManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit UdpManager(QObject *parent = nullptr);
+    // 获取单例实例（线程安全）
+    static UdpManager& instance();
+    
+    // 删除拷贝构造函数和赋值运算符
+    UdpManager(const UdpManager&) = delete;
+    UdpManager& operator=(const UdpManager&) = delete;
+    UdpManager(UdpManager&&) = delete;
+    UdpManager& operator=(UdpManager&&) = delete;
+
+    //~UdpManager();
 
     Q_INVOKABLE bool bind(quint16 port);
     Q_INVOKABLE void close();
@@ -24,6 +33,8 @@ private slots:
     void onReadyRead();
 
 private:
+    explicit UdpManager(QObject *parent = nullptr);
+    ~UdpManager() = default;
     QUdpSocket *m_udpSocket;
 };
 

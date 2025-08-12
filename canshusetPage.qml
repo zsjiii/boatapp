@@ -4,7 +4,7 @@ import QtQuick.Layouts 1.15
 
 ApplicationWindow {
     id: mainWindow
-    width: 1200
+    width: 1280
     height: 800
     visible: true
     title: "系统参数配置"
@@ -643,7 +643,11 @@ ApplicationWindow {
             readOnly: parent.readOnly
             echoMode: parent.echoMode
             validator: parent.validator
-            onTextChanged: parent.valueChanged(text)
+            onTextChanged: {
+                if (text !== value){
+                    value = text
+                }
+            }
             Layout.fillWidth: true
 
             background: Rectangle {
