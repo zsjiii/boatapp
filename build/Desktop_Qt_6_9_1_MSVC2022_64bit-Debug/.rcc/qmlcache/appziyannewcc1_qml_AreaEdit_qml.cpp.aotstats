@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 487,
+                        "durationMicroseconds": 1805,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 15
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 236,
+                        "durationMicroseconds": 263,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 16
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 104,
+                        "durationMicroseconds": 121,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 14
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 186,
+                        "durationMicroseconds": 197,
                         "errorMessage": "",
                         "functionName": "wrapMode",
                         "line": 22
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 15,
-                        "durationMicroseconds": 272,
+                        "durationMicroseconds": 268,
                         "errorMessage": "",
                         "functionName": "text",
                         "line": 30
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 314,
+                        "durationMicroseconds": 141,
                         "errorMessage": "",
                         "functionName": "style",
                         "line": 32
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 388,
+                        "durationMicroseconds": 188,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 28
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 210,
+                        "durationMicroseconds": 159,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 29

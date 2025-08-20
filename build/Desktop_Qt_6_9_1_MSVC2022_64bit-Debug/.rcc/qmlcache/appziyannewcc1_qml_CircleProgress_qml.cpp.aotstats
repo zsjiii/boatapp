@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 317,
+                        "durationMicroseconds": 325,
                         "errorMessage": "",
                         "functionName": "value",
                         "line": 7
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 33,
-                        "durationMicroseconds": 1318,
+                        "durationMicroseconds": 1076,
                         "errorMessage": "",
                         "functionName": "valueAngle",
                         "line": 8
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 26,
-                        "durationMicroseconds": 290,
+                        "durationMicroseconds": 201,
                         "errorMessage": "",
                         "functionName": "onValueAngleChanged",
                         "line": 17
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 21,
-                        "durationMicroseconds": 518,
+                        "durationMicroseconds": 582,
                         "errorMessage": "",
                         "functionName": "onValueChanged",
                         "line": 18
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 12,
-                        "durationMicroseconds": 242,
+                        "durationMicroseconds": 209,
                         "errorMessage": "",
                         "functionName": "x",
                         "line": 27
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 226,
+                        "durationMicroseconds": 150,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 31
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 15,
-                        "durationMicroseconds": 335,
+                        "durationMicroseconds": 240,
                         "errorMessage": "",
                         "functionName": "text",
                         "line": 32
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 33,
-                        "durationMicroseconds": 174,
+                        "durationMicroseconds": 124,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 28
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 217,
+                        "durationMicroseconds": 205,
                         "errorMessage": "",
                         "functionName": "pixelSize",
                         "line": 30
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 97,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 37
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 98,
+                        "durationMicroseconds": 91,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 38
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 18,
-                        "durationMicroseconds": 390,
+                        "durationMicroseconds": 436,
                         "errorMessage": "Cannot access value for name valueAngle",
                         "functionName": "onPaint",
                         "line": 39

@@ -5,15 +5,15 @@ Item {
 
     property double minValue: 0
     property double maxValue: 100
-    property double currentValue: 0
+    property double currentValue: 50
     // 背景圆弧线宽
     property double btm_lineWidth: parent.width/20
     // 背景圆弧颜色
     property color btm_backgroundColor: "#ffffff";
     // 背景圆弧半径 开始角度 结束角度
-    property int btm_r: 20
-    property double btm_startAngle: 0
-    property double btm_endAngle: 90
+    property int btm_r: btm_lineWidth/2
+    property double btm_startAngle: -180
+    property double btm_endAngle: 0
 
     onBtm_lineWidthChanged: canvas.requestPaint()
     onBtm_backgroundColorChanged: canvas.requestPaint()
@@ -26,9 +26,9 @@ Item {
     // 顶层圆弧颜色
     property color top_backgroundColor: "lightgreen"
     // 顶层圆弧半径 开始角度 结束角度
-    property int top_r: 20
-    property double top_startAngle: 0
-    property double top_endAngle: (currentValue - minValue)/(maxValue-minValue)*(btm_endAngle-btm_startAngle)
+    property int top_r: btm_lineWidth
+    property double top_startAngle: -180
+    property double top_endAngle: (currentValue - minValue)/(maxValue-minValue)*(btm_endAngle-btm_startAngle) + top_startAngle
     //指针参数
     property real needleLength: top_r-5
     property real needleTipWidth: toPixels(0.02)
@@ -104,8 +104,8 @@ Item {
             var neddle_y = (carItem.height/2)+(carItem.top_r-carItem.top_lineWidth+carItem.dial_addR)*Math.sin(carItem.top_endAngle/180*Math.PI);
             ctx.moveTo(canvas.width/2, canvas.height/2);
             ctx.lineTo(neddle_x,neddle_y);
-            neddle_x = (carItem.width/2)+((carItem.top_r-carItem.top_lineWidth+carItem.dial_addR)/20)*Math.cos((carItem.top_endAngle-45)/180*Math.PI);
-            neddle_y = (carItem.height/2)+((carItem.top_r-carItem.top_lineWidth+carItem.dial_addR)/20)*Math.sin((carItem.top_endAngle-45)/180*Math.PI);
+            neddle_x = (carItem.width/2)+((carItem.top_r-carItem.top_lineWidth+carItem.dial_addR)/10)*Math.cos((carItem.top_endAngle-45)/180*Math.PI);
+            neddle_y = (carItem.height/2)+((carItem.top_r-carItem.top_lineWidth+carItem.dial_addR)/10)*Math.sin((carItem.top_endAngle-45)/180*Math.PI);
             ctx.lineTo(neddle_x,neddle_y);
             ctx.lineTo(canvas.width/2, canvas.height/2);
             ctx.closePath();

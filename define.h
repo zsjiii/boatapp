@@ -96,7 +96,7 @@ typedef struct _BOAT_PATH_SET
 {
     //DA_HEAD			da_head;//20
     //FBD_Path		b_path;//16* ui_planPointNumber+52
-    DA_HEAD		da_head;
+    DA_HEAD		xu_head;
     FBD_Path_Header fbd_path_header;
     LonLatPoint		*p_path_pt;
     DA_END			da_end;//4

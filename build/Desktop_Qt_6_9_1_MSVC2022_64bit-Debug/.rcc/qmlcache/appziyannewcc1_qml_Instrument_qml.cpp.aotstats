@@ -6,15 +6,23 @@
                     {
                         "codegenSuccessful": true,
                         "column": 36,
-                        "durationMicroseconds": 671,
+                        "durationMicroseconds": 285,
                         "errorMessage": "",
                         "functionName": "btm_lineWidth",
                         "line": 10
                     },
                     {
                         "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 122,
+                        "errorMessage": "",
+                        "functionName": "btm_r",
+                        "line": 14
+                    },
+                    {
+                        "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 200,
+                        "durationMicroseconds": 128,
                         "errorMessage": "",
                         "functionName": "onBtm_lineWidthChanged",
                         "line": 18
@@ -22,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 142,
+                        "durationMicroseconds": 121,
                         "errorMessage": "",
                         "functionName": "onBtm_backgroundColorChanged",
                         "line": 19
@@ -30,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 21,
-                        "durationMicroseconds": 134,
+                        "durationMicroseconds": 79,
                         "errorMessage": "",
                         "functionName": "onBtm_rChanged",
                         "line": 20
@@ -38,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 30,
-                        "durationMicroseconds": 126,
+                        "durationMicroseconds": 71,
                         "errorMessage": "",
                         "functionName": "onBtm_startAngleChanged",
                         "line": 21
@@ -46,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 131,
+                        "durationMicroseconds": 75,
                         "errorMessage": "",
                         "functionName": "onBtm_endAngleChanged",
                         "line": 22
@@ -54,15 +62,23 @@
                     {
                         "codegenSuccessful": true,
                         "column": 33,
-                        "durationMicroseconds": 212,
+                        "durationMicroseconds": 122,
                         "errorMessage": "",
                         "functionName": "top_lineWidth",
                         "line": 25
                     },
                     {
                         "codegenSuccessful": true,
+                        "column": 25,
+                        "durationMicroseconds": 43,
+                        "errorMessage": "",
+                        "functionName": "top_r",
+                        "line": 29
+                    },
+                    {
+                        "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 505,
+                        "durationMicroseconds": 285,
                         "errorMessage": "",
                         "functionName": "top_endAngle",
                         "line": 31
@@ -70,7 +86,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 33,
-                        "durationMicroseconds": 164,
+                        "durationMicroseconds": 78,
                         "errorMessage": "",
                         "functionName": "needleLength",
                         "line": 33
@@ -78,7 +94,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 35,
-                        "durationMicroseconds": 138,
+                        "durationMicroseconds": 87,
                         "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
                         "functionName": "needleTipWidth",
                         "line": 34
@@ -86,7 +102,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 157,
+                        "durationMicroseconds": 56,
                         "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
                         "functionName": "needleBaseWidth",
                         "line": 35
@@ -94,7 +110,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 148,
+                        "durationMicroseconds": 121,
                         "errorMessage": "",
                         "functionName": "onTop_lineWidthChanged",
                         "line": 36
@@ -102,7 +118,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 174,
+                        "durationMicroseconds": 58,
                         "errorMessage": "",
                         "functionName": "onTop_backgroundColorChanged",
                         "line": 37
@@ -110,7 +126,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 21,
-                        "durationMicroseconds": 172,
+                        "durationMicroseconds": 58,
                         "errorMessage": "",
                         "functionName": "onTop_rChanged",
                         "line": 38
@@ -118,7 +134,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 30,
-                        "durationMicroseconds": 142,
+                        "durationMicroseconds": 71,
                         "errorMessage": "",
                         "functionName": "onTop_startAngleChanged",
                         "line": 39
@@ -126,7 +142,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 122,
+                        "durationMicroseconds": 61,
                         "errorMessage": "",
                         "functionName": "onTop_endAngleChanged",
                         "line": 40
@@ -134,7 +150,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 774,
+                        "durationMicroseconds": 314,
                         "errorMessage": "",
                         "functionName": "onCurrentValueChanged",
                         "line": 41
@@ -142,7 +158,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 26,
-                        "durationMicroseconds": 138,
+                        "durationMicroseconds": 74,
                         "errorMessage": "",
                         "functionName": "onDial_colorChanged",
                         "line": 53
@@ -150,7 +166,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 30,
-                        "durationMicroseconds": 148,
+                        "durationMicroseconds": 57,
                         "errorMessage": "",
                         "functionName": "onDial_lineWidthChanged",
                         "line": 54
@@ -158,7 +174,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 139,
+                        "durationMicroseconds": 83,
                         "errorMessage": "",
                         "functionName": "onDial_addRChanged",
                         "line": 55
@@ -166,7 +182,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 173,
+                        "durationMicroseconds": 54,
                         "errorMessage": "",
                         "functionName": "onDial_longNumChanged",
                         "line": 56
@@ -174,7 +190,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 129,
+                        "durationMicroseconds": 83,
                         "errorMessage": "",
                         "functionName": "onDial_longLenChanged",
                         "line": 57
@@ -190,7 +206,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 140,
+                        "durationMicroseconds": 68,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 63
@@ -198,7 +214,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 105,
+                        "durationMicroseconds": 50,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 64
@@ -206,7 +222,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 18,
-                        "durationMicroseconds": 27128,
+                        "durationMicroseconds": 12612,
                         "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
                         "functionName": "onPaint",
                         "line": 66

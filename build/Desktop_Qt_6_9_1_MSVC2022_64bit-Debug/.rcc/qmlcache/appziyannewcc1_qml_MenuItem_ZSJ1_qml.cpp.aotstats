@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 13,
-                        "durationMicroseconds": 511,
+                        "durationMicroseconds": 736,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "height",
                         "line": 10
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 5110,
+                        "durationMicroseconds": 9897,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "subModel",
                         "line": 21
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 118,
+                        "durationMicroseconds": 150,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "openMenus",
                         "line": 76
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 163,
+                        "durationMicroseconds": 174,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 106
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 96,
+                        "durationMicroseconds": 129,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 107
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 89,
+                        "durationMicroseconds": 108,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 112
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 115,
+                        "durationMicroseconds": 105,
                         "errorMessage": "",
                         "functionName": "text",
                         "line": 117
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 842,
+                        "durationMicroseconds": 1472,
                         "errorMessage": "method closeDynamicMenus cannot be resolved.",
                         "functionName": "onClicked",
                         "line": 128
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 119,
+                        "durationMicroseconds": 173,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 127
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 128,
+                        "durationMicroseconds": 132,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 140
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 12,
-                        "durationMicroseconds": 107,
+                        "durationMicroseconds": 133,
                         "errorMessage": "",
                         "functionName": "x",
                         "line": 141
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 12,
-                        "durationMicroseconds": 221,
+                        "durationMicroseconds": 325,
                         "errorMessage": "",
                         "functionName": "y",
                         "line": 142
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 417,
+                        "durationMicroseconds": 434,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 144
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 16,
-                        "durationMicroseconds": 297,
+                        "durationMicroseconds": 343,
                         "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
                         "functionName": "model",
                         "line": 145
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 20,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 61,
                         "errorMessage": "Cannot access value for name mainListView",
                         "functionName": "width",
                         "line": 147
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 21,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 39,
                         "errorMessage": "Cannot access value for name mainButton",
                         "functionName": "height",
                         "line": 148
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 76,
+                        "durationMicroseconds": 98,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 150
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 111,
+                        "durationMicroseconds": 123,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 156
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 44,
-                        "durationMicroseconds": 190,
+                        "durationMicroseconds": 200,
                         "errorMessage": "",
                         "functionName": "preferredWidth",
                         "line": 155
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 657,
+                        "durationMicroseconds": 783,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "text",
                         "line": 160
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 44,
-                        "durationMicroseconds": 129,
+                        "durationMicroseconds": 137,
                         "errorMessage": "",
                         "functionName": "verticalAlignment",
                         "line": 161
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 43,
-                        "durationMicroseconds": 77,
+                        "durationMicroseconds": 86,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 159
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 617,
+                        "durationMicroseconds": 662,
                         "errorMessage": "Cannot access value for name mainListView",
                         "functionName": "onClicked",
                         "line": 166
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 90,
+                        "durationMicroseconds": 84,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 165
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 97,
+                        "durationMicroseconds": 115,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 196
@@ -222,7 +222,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 44,
-                        "durationMicroseconds": 232,
+                        "durationMicroseconds": 264,
                         "errorMessage": "",
                         "functionName": "preferredWidth",
                         "line": 195
@@ -230,7 +230,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 1123,
+                        "durationMicroseconds": 1222,
                         "errorMessage": "Cannot load property subModel from (component in D:/ZZZ_CESHI/ziyannewcc1_qml/MenuItem_ZSJ1.qml)::parent with type QQuickItem.",
                         "functionName": "text",
                         "line": 201
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 43,
-                        "durationMicroseconds": 86,
+                        "durationMicroseconds": 108,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 199
@@ -246,7 +246,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 1680,
+                        "durationMicroseconds": 2422,
                         "errorMessage": "Cannot load property subModel from (component in D:/ZZZ_CESHI/ziyannewcc1_qml/MenuItem_ZSJ1.qml)::parent with type QQuickItem.",
                         "functionName": "onClicked",
                         "line": 213
@@ -254,7 +254,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 70,
+                        "durationMicroseconds": 156,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 212
@@ -278,7 +278,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 274,
+                        "durationMicroseconds": 250,
                         "errorMessage": "Cannot retrieve a non-object type by ID: dynPopup",
                         "functionName": "model",
                         "line": 247
@@ -286,7 +286,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 250,
+                        "durationMicroseconds": 112,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 246
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 163,
+                        "durationMicroseconds": 59,
                         "errorMessage": "Cannot access value for name listView",
                         "functionName": "width",
                         "line": 251
@@ -302,7 +302,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 254,
+                        "durationMicroseconds": 298,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "height",
                         "line": 252
@@ -310,7 +310,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 60,
+                        "durationMicroseconds": 95,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 254
@@ -318,7 +318,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 37,
-                        "durationMicroseconds": 99,
+                        "durationMicroseconds": 123,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 262
@@ -326,7 +326,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 52,
-                        "durationMicroseconds": 150,
+                        "durationMicroseconds": 196,
                         "errorMessage": "",
                         "functionName": "preferredWidth",
                         "line": 261
@@ -334,7 +334,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 39,
-                        "durationMicroseconds": 486,
+                        "durationMicroseconds": 737,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "text",
                         "line": 266
@@ -342,7 +342,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 52,
-                        "durationMicroseconds": 166,
+                        "durationMicroseconds": 141,
                         "errorMessage": "",
                         "functionName": "verticalAlignment",
                         "line": 267
@@ -350,7 +350,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 51,
-                        "durationMicroseconds": 74,
+                        "durationMicroseconds": 85,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 265
@@ -358,7 +358,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 44,
-                        "durationMicroseconds": 4427,
+                        "durationMicroseconds": 16551,
                         "errorMessage": "Cannot access value for name dynPopup",
                         "functionName": "onClicked",
                         "line": 272
@@ -366,7 +366,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 47,
-                        "durationMicroseconds": 132,
+                        "durationMicroseconds": 315,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 271
@@ -374,7 +374,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 37,
-                        "durationMicroseconds": 109,
+                        "durationMicroseconds": 116,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 301
@@ -382,7 +382,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 52,
-                        "durationMicroseconds": 173,
+                        "durationMicroseconds": 166,
                         "errorMessage": "",
                         "functionName": "preferredWidth",
                         "line": 300
@@ -390,7 +390,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 39,
-                        "durationMicroseconds": 1436,
+                        "durationMicroseconds": 1697,
                         "errorMessage": "Cannot access value for name dynPopup",
                         "functionName": "text",
                         "line": 306
@@ -398,7 +398,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 51,
-                        "durationMicroseconds": 131,
+                        "durationMicroseconds": 134,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 304
@@ -406,7 +406,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 44,
-                        "durationMicroseconds": 1901,
+                        "durationMicroseconds": 2183,
                         "errorMessage": "Cannot access value for name dynPopup",
                         "functionName": "onClicked",
                         "line": 321
@@ -414,7 +414,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 47,
-                        "durationMicroseconds": 125,
+                        "durationMicroseconds": 128,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 320

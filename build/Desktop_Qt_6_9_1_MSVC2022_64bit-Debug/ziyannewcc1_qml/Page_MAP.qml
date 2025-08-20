@@ -8,13 +8,17 @@ import QtMultimedia 6.4
 Item {
     // 地图显示区域
     WebEngineView  {
+        anchors.left: root.left
+        anchors.top : root.top
+        width: 400
+        height: 350
         id: webView
         settings.localContentCanAccessRemoteUrls: true
         settings.localContentCanAccessFileUrls: true
         // 如果加载的HTML需要访问其他本地文件，还需要设置
         settings.allowWindowActivationFromJavaScript: true
         settings.allowGeolocationOnInsecureOrigins: true
-        anchors.fill: parent
+        //anchors.fill: parent
         url: "file:///D:/ANJI_NEW/QINGDAO730_anji/build-fem_km9-Desktop_Qt_5_12_2_MSVC2017_64bit-Debug/bmap_offline_demo/demo02.html"  // 使用file协议和相对路径
 
         onLoadingChanged: {
@@ -86,7 +90,12 @@ Item {
                     font.bold: true
                     anchors.centerIn: parent
                 }
-                onClicked: videoOverlay.visible = false
+                onClicked:
+                {
+                    webView.width = 100
+                    webView.height = 100
+                    //videoOverlay.visible = false
+                }
             }
         }
 

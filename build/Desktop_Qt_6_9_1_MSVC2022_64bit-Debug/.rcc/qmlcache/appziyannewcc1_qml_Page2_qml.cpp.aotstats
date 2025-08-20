@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 656,
+                        "durationMicroseconds": 1316,
                         "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
                         "functionName": "channelData",
                         "line": 9
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 158,
+                        "durationMicroseconds": 173,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 40
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 258,
+                        "durationMicroseconds": 220,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 49
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 933,
+                        "durationMicroseconds": 719,
                         "errorMessage": "Cannot access value for name index",
                         "functionName": "text",
                         "line": 75
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 43,
-                        "durationMicroseconds": 182,
+                        "durationMicroseconds": 187,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 79
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 35,
-                        "durationMicroseconds": 670,
+                        "durationMicroseconds": 673,
                         "errorMessage": "Cannot access value for name channelData",
                         "functionName": "text",
                         "line": 98
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 36,
-                        "durationMicroseconds": 1364,
+                        "durationMicroseconds": 1253,
                         "errorMessage": "Cannot access value for name channelData",
                         "functionName": "color",
                         "line": 101
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 47,
-                        "durationMicroseconds": 127,
+                        "durationMicroseconds": 146,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 97
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 45,
-                        "durationMicroseconds": 560,
+                        "durationMicroseconds": 590,
                         "errorMessage": "",
                         "functionName": "pixelSize",
                         "line": 99
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 40,
-                        "durationMicroseconds": 298,
+                        "durationMicroseconds": 343,
                         "errorMessage": "Type conversion to QVariant does not have a property color for writing",
                         "functionName": "onEntered",
                         "line": 112
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 39,
-                        "durationMicroseconds": 143,
+                        "durationMicroseconds": 232,
                         "errorMessage": "Type conversion to QVariant does not have a property color for writing",
                         "functionName": "onExited",
                         "line": 116
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 40,
-                        "durationMicroseconds": 988,
+                        "durationMicroseconds": 942,
                         "errorMessage": "Cannot access value for name index",
                         "functionName": "onClicked",
                         "line": 120
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 43,
-                        "durationMicroseconds": 108,
+                        "durationMicroseconds": 144,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 110

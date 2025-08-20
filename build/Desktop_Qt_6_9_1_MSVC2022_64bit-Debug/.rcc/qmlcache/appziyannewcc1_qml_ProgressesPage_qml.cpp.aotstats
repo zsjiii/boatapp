@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 711,
+                        "durationMicroseconds": 426,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 12
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 23,
-                        "durationMicroseconds": 197,
+                        "durationMicroseconds": 76,
                         "errorMessage": "Cannot access value for name gasval",
                         "functionName": "currentValue",
                         "line": 29
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 183,
+                        "durationMicroseconds": 178,
                         "errorMessage": "",
                         "functionName": "btm_endAngle",
                         "line": 31
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 224,
+                        "durationMicroseconds": 420,
                         "errorMessage": "",
                         "functionName": "btm_r",
                         "line": 33
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 213,
+                        "durationMicroseconds": 448,
                         "errorMessage": "",
                         "functionName": "top_r",
                         "line": 34
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 1853,
+                        "durationMicroseconds": 286,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 19
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 22,
-                        "durationMicroseconds": 119,
+                        "durationMicroseconds": 135,
                         "errorMessage": "cannot convert from QQuickItem::top with type QQuickAnchorLine to double",
                         "functionName": "top",
                         "line": 20
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 294,
+                        "durationMicroseconds": 248,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 39
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 21,
-                        "durationMicroseconds": 233,
+                        "durationMicroseconds": 204,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 40
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 19,
-                        "durationMicroseconds": 73,
+                        "durationMicroseconds": 75,
                         "errorMessage": "Cannot retrieve a non-object type by ID: slider",
                         "functionName": "text",
                         "line": 41
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 139,
+                        "durationMicroseconds": 173,
                         "errorMessage": "",
                         "functionName": "style",
                         "line": 42
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 34,
-                        "durationMicroseconds": 137,
+                        "durationMicroseconds": 139,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
                         "line": 48
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 224,
+                        "durationMicroseconds": 121,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 38
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 26,
-                        "durationMicroseconds": 132,
+                        "durationMicroseconds": 108,
                         "errorMessage": "",
                         "functionName": "weight",
                         "line": 43
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 34,
-                        "durationMicroseconds": 131,
+                        "durationMicroseconds": 134,
                         "errorMessage": "",
                         "functionName": "capitalization",
                         "line": 44

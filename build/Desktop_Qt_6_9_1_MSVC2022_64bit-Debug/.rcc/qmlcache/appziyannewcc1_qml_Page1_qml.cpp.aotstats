@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 393,
+                        "durationMicroseconds": 1908,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 15
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 290,
+                        "durationMicroseconds": 1330,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 23
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 177,
+                        "durationMicroseconds": 213,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 20
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 211,
+                        "durationMicroseconds": 176,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
                         "line": 21
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 220,
+                        "durationMicroseconds": 191,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 151

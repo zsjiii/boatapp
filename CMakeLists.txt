@@ -9,6 +9,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0")  # 禁用优化，嵌入符号
 # 查找基础 Qt 组件
 set(CMAKE_PREFIX_PATH "D:/Qt/QT6/6.9.1/msvc2022_64")
 find_package(Qt6 REQUIRED COMPONENTS Core Quick Network SerialPort Multimedia Core5Compat WebEngineWidgets WebEngineQuick WebEngineCore)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 # find_package(Qt6 6.9.1 REQUIRED WebEngine WebEngineQuick WebEngineCore)
 # target_link_libraries(appziyannewcc1_qml PRIVATE
 #     Qt6::WebEngine
@@ -52,6 +53,7 @@ qt_add_qml_module(appziyannewcc1_qml
         QML_FILES TabItem_ZSJ1.qml
         QML_FILES DrongItem.qml
         QML_FILES canshusetPage.qml
+        SOURCES cmd_send.h cmd_send.cpp
 
 )
 
@@ -73,7 +75,10 @@ target_link_libraries(appziyannewcc1_qml
     Qt6::SerialPort
     Qt6::Multimedia
     Qt6::Core5Compat
+
+    Qt6::WebEngineQuick
 )
+target_link_libraries(appziyannewcc1_qml PRIVATE Qt6::Core)
 include(GNUInstallDirs)
 install(TARGETS appziyannewcc1_qml
     BUNDLE DESTINATION .

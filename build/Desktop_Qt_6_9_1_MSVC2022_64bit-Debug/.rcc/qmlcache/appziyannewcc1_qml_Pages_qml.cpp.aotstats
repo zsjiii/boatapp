@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 345,
+                        "durationMicroseconds": 407,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 15
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 75,
+                        "durationMicroseconds": 1515,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 16
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 97,
+                        "durationMicroseconds": 326,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 12
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 81,
+                        "durationMicroseconds": 664,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 13
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 151,
+                        "durationMicroseconds": 350,
                         "errorMessage": "",
                         "functionName": "visible",
                         "line": 23
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 69,
+                        "durationMicroseconds": 132,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 22
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 131,
+                        "durationMicroseconds": 300,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 31
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 21,
-                        "durationMicroseconds": 127,
+                        "durationMicroseconds": 310,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 32
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 126,
+                        "durationMicroseconds": 254,
                         "errorMessage": "",
                         "functionName": "visible",
                         "line": 33
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 30,
-                        "durationMicroseconds": 89,
+                        "durationMicroseconds": 226,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 28
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 171,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 29
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 22,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 43,
                         "errorMessage": "Cannot retrieve a non-object type by ID: page2",
                         "functionName": "page2Object",
                         "line": 53

@@ -3,6 +3,7 @@
 #include <cstdio>
 extern BOAT_INFO1 zh_info;
 extern QObject *page2;
+int g_ctrl_id;
 SerialPortManager::SerialPortManager(QObject *parent) : QObject(parent)
 {
     m_udpmode = new UdpManager();
@@ -192,65 +193,6 @@ void SerialPortManager::Sig_Send_t30info(UniRC* prevdata)
         serialPortTime = interval;
     }
     lastCallTime = currentTime;
-    /************档位设置********************/
-    //前进挡
-    if(prevdata->DATA[6] == 1950 && zh_info.s_info1.b_LeftGas <= 5 && zh_info.s_info1.b_RightGas <=5)
-    {
-        gear = 0x01;
-    }
-    else if(prevdata->DATA[8] == 1950 && (zh_info.s_info1.b_LeftGas>5 || zh_info.s_info1.b_RightGas >5))
-    {
-        //qDebug()<<"请将油门置零后再进行换挡操作";
-    }
-
-    //空挡
-    if(prevdata->DATA[8] == 1500)
-    {
-        gear = 0x02;
-    }
-
-    //后退挡
-    if(prevdata->DATA[8] == 1050 && zh_info.s_info1.b_LeftGas <=5 && zh_info.s_info1.b_RightGas <=5)
-    {
-        gear = 0x03;
-    }
-    else if(prevdata->DATA[8] == 1050 && (zh_info.s_info1.b_LeftGas >5 || zh_info.s_info1.b_RightGas >5))
-    {
-        //qDebug()<<"请将油门置零后再进行换挡操作";
-    }
-
-    /************工作模式********************/
-
-    if(prevdata->DATA[4] == 1000)          //有人
-    {
-        cruise_mode = 0x00;
-    }
-    else if(prevdata->DATA[4] == 1250)     //无人
-    {
-        cruise_mode = 0x01;
-    }
-    else if(prevdata->DATA[4] == 1425)    //自动巡航
-    {
-        cruise_mode = 0x11;
-    }
-
-    /************发动机的点火启动，熄火停车********************/
-    onoff = 0x00;
-    if(prevdata->DATA[7] == 1050)
-    {
-        if(zh_info.s_info1.b_LeftMotorWorkState == 0x04 || zh_info.s_info1.b_LeftMotorWorkState == 0x00)
-            onoff = 0x01;
-        else if(zh_info.s_info1.b_LeftMotorWorkState == 0x01)
-            onoff = 0x04;
-    }
-    if(prevdata->DATA[7] == 1950)
-    {
-        if(zh_info.s_info1.b_LeftMotorWorkState == 0x04 || zh_info.s_info1.b_LeftMotorWorkState == 0x02)
-            onoff = 0x01;
-        else if(zh_info.s_info1.b_LeftMotorWorkState == 0x01)
-            onoff = 0x04;
-    }
-
     /************F1按钮处理逻辑********************/
     //控制权切换,0x04表示便携控制器请求切换；0x05表示艇端显控器切换
     handoff = 0x00;
@@ -264,208 +206,242 @@ void SerialPortManager::Sig_Send_t30info(UniRC* prevdata)
     {
         handoff = 0x05;
     }
-
-//    /************F6按钮舱盖急停********************/
-//    if (rev_info->sbus2[15] == 200 && !stopProcessed)
-//    {
-//        stopProcessed = true;
-//        emergencyStop = true;
-//        qDebug() <<"111";
-//    }
-//    else if (rev_info->sbus2[15] != 200 && stopProcessed)
-//    {
-//        stopProcessed = false;
-//        qDebug() <<"222";
-//    }
-
-//    /************LD舱盖控制********************/
-//    HatchCmd = prevdata->DATA[5]; // 控制舱盖位置
-//    if(HatchCmd != old_HatchCmd)
-//    {
-//        old_HatchCmd = HatchCmd;
-//        Hatch_changeflg=0;
-//    }
-//    else if(HatchCmd == old_HatchCmd)
-//    {
-//        if(Hatch_changeflg == 0)
-//        {
-//            modbusInstance->toggleHatch(static_cast<quint16>(HatchCmd);
-//            Hatch_changeflg ++;
-//            old_HatchCmd = HatchCmd;
-//        }
-//    }
-    // 下面为油门增减，输出值为gasPedaValue，实际值为precisionThrottle
-
-    /************油门向上********************/
-    int accelerationGear=0;
-    if( prevdata->DATA[1] > 1500  && prevdata->DATA[1] < 1590 )
-        accelerationGear =5;
-    else if( prevdata->DATA[1] >= 1590  && prevdata->DATA[1] < 1680 )
-        accelerationGear =4;
-    else if( prevdata->DATA[1] >= 1680  && prevdata->DATA[1] < 1770 )
-        accelerationGear =3;
-    else if( prevdata->DATA[1] >= 1770  && prevdata->DATA[1] < 1860 )
-        accelerationGear =2;
-    else if( prevdata->DATA[1] >= 1860 )
-        accelerationGear =1;
-
-    if( prevdata->DATA[0] > 1505 )
+    if(g_ctrl_id == 0x01)
     {
-        forwardThrottleTime += serialPortTime;
-        //qDebug() <<"前进计时"<<forwardThrottleTime;
-        if(forwardThrottleTime >= 1000)
+
+        /************档位设置********************/
+        //前进挡
+        if(prevdata->DATA[6] == 1950 && zh_info.s_info1.b_LeftGas <= 5 && zh_info.s_info1.b_RightGas <=5)
         {
-            forwardThrottleTime =0;
-            switch (accelerationGear)
+            gear = 0x01;
+        }
+        else if(prevdata->DATA[8] == 1950 && (zh_info.s_info1.b_LeftGas>5 || zh_info.s_info1.b_RightGas >5))
+        {
+            //qDebug()<<"请将油门置零后再进行换挡操作";
+        }
+
+        //空挡
+        if(prevdata->DATA[8] == 1500)
+        {
+            gear = 0x02;
+        }
+
+        //后退挡
+        if(prevdata->DATA[8] == 1050 && zh_info.s_info1.b_LeftGas <=5 && zh_info.s_info1.b_RightGas <=5)
+        {
+            gear = 0x03;
+        }
+        else if(prevdata->DATA[8] == 1050 && (zh_info.s_info1.b_LeftGas >5 || zh_info.s_info1.b_RightGas >5))
+        {
+            //qDebug()<<"请将油门置零后再进行换挡操作";
+        }
+
+        /************工作模式********************/
+
+        if(prevdata->DATA[4] == 1000)          //有人
+        {
+            cruise_mode = 0x00;
+        }
+        else if(prevdata->DATA[4] == 1250)     //无人
+        {
+            cruise_mode = 0x01;
+        }
+        else if(prevdata->DATA[4] == 1425)    //自动巡航
+        {
+            cruise_mode = 0x11;
+        }
+
+        /************发动机的点火启动，熄火停车********************/
+        onoff = 0x00;
+        if(prevdata->DATA[7] == 1050)
+        {
+            if(zh_info.s_info1.b_LeftMotorWorkState == 0x04 || zh_info.s_info1.b_LeftMotorWorkState == 0x00)
+                onoff = 0x01;
+            else if(zh_info.s_info1.b_LeftMotorWorkState == 0x01)
+                onoff = 0x04;
+        }
+        if(prevdata->DATA[7] == 1950)
+        {
+            if(zh_info.s_info1.b_LeftMotorWorkState == 0x04 || zh_info.s_info1.b_LeftMotorWorkState == 0x02)
+                onoff = 0x01;
+            else if(zh_info.s_info1.b_LeftMotorWorkState == 0x01)
+                onoff = 0x04;
+        }
+
+
+    //    /************F6按钮舱盖急停********************/
+    //    if (rev_info->sbus2[15] == 200 && !stopProcessed)
+    //    {
+    //        stopProcessed = true;
+    //        emergencyStop = true;
+    //        qDebug() <<"111";
+    //    }
+    //    else if (rev_info->sbus2[15] != 200 && stopProcessed)
+    //    {
+    //        stopProcessed = false;
+    //        qDebug() <<"222";
+    //    }
+
+        // 下面为油门增减，输出值为gasPedaValue，实际值为precisionThrottle
+
+        /************油门向上********************/
+        int accelerationGear=0;
+        if( prevdata->DATA[1] > 1500  && prevdata->DATA[1] < 1590 )
+            accelerationGear =5;
+        else if( prevdata->DATA[1] >= 1590  && prevdata->DATA[1] < 1680 )
+            accelerationGear =4;
+        else if( prevdata->DATA[1] >= 1680  && prevdata->DATA[1] < 1770 )
+            accelerationGear =3;
+        else if( prevdata->DATA[1] >= 1770  && prevdata->DATA[1] < 1860 )
+            accelerationGear =2;
+        else if( prevdata->DATA[1] >= 1860 )
+            accelerationGear =1;
+
+        if( prevdata->DATA[0] > 1505 )
+        {
+            forwardThrottleTime += serialPortTime;
+            //qDebug() <<"前进计时"<<forwardThrottleTime;
+            if(forwardThrottleTime >= 1000)
             {
-                case 1:
-                    precisionThrottle += 5;
-                    gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
-                    break;
-                case 2:
-                    precisionThrottle += 3.333;
-                    gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5); //
-                    break;
-                case 3:
-                    precisionThrottle += 2.857;
-                    gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);//
-                    break;
-                case 4:
-                    precisionThrottle += 2.5;
-                    gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
-                    break;
-                case 5:
-                    precisionThrottle += 2;
-                    gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
-                    break;
+                forwardThrottleTime =0;
+                switch (accelerationGear)
+                {
+                    case 1:
+                        precisionThrottle += 5;
+                        gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
+                        break;
+                    case 2:
+                        precisionThrottle += 3.333;
+                        gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5); //
+                        break;
+                    case 3:
+                        precisionThrottle += 2.857;
+                        gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);//
+                        break;
+                    case 4:
+                        precisionThrottle += 2.5;
+                        gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
+                        break;
+                    case 5:
+                        precisionThrottle += 2;
+                        gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
+                        break;
+                }
             }
         }
-    }
 
-    /************油门向下********************/
-    if( prevdata->DATA[1] > 1400  && prevdata->DATA[1] <= 1495 )
-        accelerationGear =6;
-    else if( prevdata->DATA[1] > 1300  && prevdata->DATA[1] <= 1400 )
-        accelerationGear =7;
-    else if( prevdata->DATA[1] > 1200  && prevdata->DATA[1] <= 1300 )
-        accelerationGear =8;
-    else if( prevdata->DATA[1] > 1050  && prevdata->DATA[1] <= 1200 )
-        accelerationGear =9;
-    else if( prevdata->DATA[1] <= 1050 )
-        accelerationGear =10;
-    if( prevdata->DATA[1] < 1495 )
-    {
-        reduceThrottleTime += serialPortTime;
-        if(reduceThrottleTime >= 1000)
+        /************油门向下********************/
+        if( prevdata->DATA[1] > 1400  && prevdata->DATA[1] <= 1495 )
+            accelerationGear =6;
+        else if( prevdata->DATA[1] > 1300  && prevdata->DATA[1] <= 1400 )
+            accelerationGear =7;
+        else if( prevdata->DATA[1] > 1200  && prevdata->DATA[1] <= 1300 )
+            accelerationGear =8;
+        else if( prevdata->DATA[1] > 1050  && prevdata->DATA[1] <= 1200 )
+            accelerationGear =9;
+        else if( prevdata->DATA[1] <= 1050 )
+            accelerationGear =10;
+        if( prevdata->DATA[1] < 1495 )
         {
-            reduceThrottleTime =0;
-            switch (accelerationGear)
+            reduceThrottleTime += serialPortTime;
+            if(reduceThrottleTime >= 1000)
             {
-                case 10:
-                    precisionThrottle -= 5;
-                    if(precisionThrottle < 0){
-                        gasPedaValue = 0;
-                        precisionThrottle =0;
-                    } else {
-                        gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
-                    }
-                    break;
-                case 9:
-                    precisionThrottle -= 3.333;
-                    if(precisionThrottle < 0){
-                        gasPedaValue = 0;
-                        precisionThrottle =0;
-                    } else {
-                        gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
-                    }
-                    break;
-                case 8:
-                    precisionThrottle -= 2.857;
-                    if(precisionThrottle < 0){
-                        gasPedaValue = 0;
-                        precisionThrottle =0;
-                    } else {
-                        gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
-                    }
-                    break;
-                case 7:
-                    precisionThrottle -= 2.5;
-                    if(precisionThrottle < 0){
-                        gasPedaValue = 0;
-                        precisionThrottle =0;
-                    } else {
-                        gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
-                    }
-                    break;
-                case 6:
-                    precisionThrottle -= 2;
-                    if(precisionThrottle < 0){
-                        gasPedaValue = 0;
-                        precisionThrottle =0;
-                    } else {
-                        gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
-                    }
-                    break;
+                reduceThrottleTime =0;
+                switch (accelerationGear)
+                {
+                    case 10:
+                        precisionThrottle -= 5;
+                        if(precisionThrottle < 0){
+                            gasPedaValue = 0;
+                            precisionThrottle =0;
+                        } else {
+                            gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
+                        }
+                        break;
+                    case 9:
+                        precisionThrottle -= 3.333;
+                        if(precisionThrottle < 0){
+                            gasPedaValue = 0;
+                            precisionThrottle =0;
+                        } else {
+                            gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
+                        }
+                        break;
+                    case 8:
+                        precisionThrottle -= 2.857;
+                        if(precisionThrottle < 0){
+                            gasPedaValue = 0;
+                            precisionThrottle =0;
+                        } else {
+                            gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
+                        }
+                        break;
+                    case 7:
+                        precisionThrottle -= 2.5;
+                        if(precisionThrottle < 0){
+                            gasPedaValue = 0;
+                            precisionThrottle =0;
+                        } else {
+                            gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
+                        }
+                        break;
+                    case 6:
+                        precisionThrottle -= 2;
+                        if(precisionThrottle < 0){
+                            gasPedaValue = 0;
+                            precisionThrottle =0;
+                        } else {
+                            gasPedaValue = static_cast<uint8_t>(precisionThrottle + 0.5);
+                        }
+                        break;
+                }
             }
         }
-    }
-    if(gasPedaValue > 100)
-    {
-        gasPedaValue = 100;
-    }
-    if(gasPedaValue < 0)
-    {
-        gasPedaValue = 0;
-    }
+        if(gasPedaValue > 100)
+        {
+            gasPedaValue = 100;
+        }
+        if(gasPedaValue < 0)
+        {
+            gasPedaValue = 0;
+        }
 
-    /************油门向左********************/
-    if(prevdata->DATA[0] < 1100)//油门快速归零
-    {
-        gasPedaValue = 0;
-        precisionThrottle = 0;
-    }
-//    else if(info->sbus1[1] < 700 && info->sbus1[1] >500 && throttleReturn)
-//    {
-//        throttleReturn = false;
-//    }
+        /************油门向左********************/
+        if(prevdata->DATA[0] < 1100)//油门快速归零
+        {
+            gasPedaValue = 0;
+            precisionThrottle = 0;
+        }
+    //    else if(info->sbus1[1] < 700 && info->sbus1[1] >500 && throttleReturn)
+    //    {
+    //        throttleReturn = false;
+    //    }
 
-    /************F3按钮处理急停********************/
-    if (prevdata->DATA[8] == 1950)
-    {
-        shipstopProcessed = true;
-        spare = 0x01; // 切换急停状态
-    }
-    else if (prevdata->DATA[8] == 1050 && shipstopProcessed)
-    {
-        shipstopProcessed = false;
-        spare = 0x00; // 切换急停状态
-    }
+        /************F3按钮处理急停********************/
+        if (prevdata->DATA[8] == 1950)
+        {
+            shipstopProcessed = true;
+            spare = 0x01; // 切换急停状态
+        }
+        else if (prevdata->DATA[8] == 1050 && shipstopProcessed)
+        {
+            shipstopProcessed = false;
+            spare = 0x00; // 切换急停状态
+        }
 
+        //float angleDenValue = angleDen(prevdata->DATA[3], 1050.0, 1950.0, -30, +30); //舵角
+    }
+    else if(g_ctrl_id == 0x05)
+    {
+        gasPedaValue = (int)angleDen(prevdata->DATA[1], 1050.0, 1950.0, 0, 200); //
+    }
     //发动机/表面桨控制权切换，8.5m2和15m使用
 //    if(my_groupcc->getComboBox()->currentText() == "8.5m1" ||
 //       my_groupcc->getComboBox()->currentText() == "8.5m2" ||
 //       my_groupcc->getComboBox()->currentText() == "11m"     )
     {
+
         float angleDenValue = angleDen(prevdata->DATA[3], 1050.0, 1950.0, -30, +30); //舵角
-        // 表面桨控制权切换
-//        if (rev_info->sbus2[14] == 200) //按钮按下且未处理过
-//        {
-//            SurfaceButtonProcessed = true;
-//            // 切换控制权0x01是本地，0\x02是远程
-//            int LocalRemote = (zh_info.b_SwitchState[2] >> 6) & 0x03;
-//            qDebug() <<"远程本地切换"<<LocalRemote;
-
-//            {
-//                otherSwitches = 0x80;
-//            }
-//            qDebug() << "当前控制权:" << (otherSwitches == 0x80 ? "本地" : "远程");
-//        }
-//        else if (rev_info->sbus2[13] == 200 ) // 表面桨控制权切换按钮松开
-//        {
-//            otherSwitches = 0x40;
-//            SurfaceButtonProcessed = false; // 重置防抖动标志位
-//        }
-
         SetDrivingCtrl( gear,  gasPedaValue,  angleDenValue,0, g_ship_index);
         SetCtrl_Premission( handoff ,g_ship_index);
         SetOtherCtrl( onoff,  spare,  cruise_mode, otherSwitches, g_ship_index, authorityControl);

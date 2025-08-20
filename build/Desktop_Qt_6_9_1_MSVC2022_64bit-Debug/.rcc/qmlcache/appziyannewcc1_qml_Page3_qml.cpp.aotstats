@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 5,
-                        "durationMicroseconds": 368,
+                        "durationMicroseconds": 426,
                         "errorMessage": "Cannot retrieve a non-object type by ID: videoPage",
                         "functionName": "toggleFullscreen",
                         "line": 126
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 5,
-                        "durationMicroseconds": 275,
+                        "durationMicroseconds": 318,
                         "errorMessage": "",
                         "functionName": "takeSnapshot",
                         "line": 133
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 5,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 60,
                         "errorMessage": "Cannot retrieve a non-object type by ID: settingsDialog",
                         "functionName": "openSettings",
                         "line": 138
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 181,
+                        "durationMicroseconds": 244,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 13
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 126,
+                        "durationMicroseconds": 125,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 14
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 149,
+                        "durationMicroseconds": 147,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 15
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 78,
+                        "durationMicroseconds": 127,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 20
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 28,
-                        "durationMicroseconds": 113,
+                        "durationMicroseconds": 224,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 71
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 37,
-                        "durationMicroseconds": 109,
+                        "durationMicroseconds": 195,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 72
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 119,
+                        "durationMicroseconds": 167,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 83
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 25,
-                        "durationMicroseconds": 342,
+                        "durationMicroseconds": 552,
                         "errorMessage": "Cannot access value for name statusBar",
                         "functionName": "bottom",
                         "line": 84
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 100,
+                        "durationMicroseconds": 178,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 85
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 95,
+                        "durationMicroseconds": 153,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 86
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 26,
-                        "durationMicroseconds": 67,
+                        "durationMicroseconds": 109,
                         "errorMessage": "",
                         "functionName": "videoOutput",
                         "line": 94
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 103,
+                        "durationMicroseconds": 176,
                         "errorMessage": "",
                         "functionName": "fillMode",
                         "line": 101
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 92,
+                        "durationMicroseconds": 81,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 99
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 22,
-                        "durationMicroseconds": 243,
+                        "durationMicroseconds": 488,
                         "errorMessage": "Cannot generate efficient code for internal conversion into unsupported wrapper type.",
                         "functionName": "visible",
                         "line": 119
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 66,
+                        "durationMicroseconds": 97,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 115

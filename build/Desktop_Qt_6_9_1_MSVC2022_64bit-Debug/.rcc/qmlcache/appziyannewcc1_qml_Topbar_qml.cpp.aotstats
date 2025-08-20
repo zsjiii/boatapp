@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 2297,
+                        "durationMicroseconds": 1841,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "menuItems",
                         "line": 20
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 37,
-                        "durationMicroseconds": 824,
+                        "durationMicroseconds": 689,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "fileDropdownItems",
                         "line": 30
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 41,
-                        "durationMicroseconds": 708,
+                        "durationMicroseconds": 613,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "settingsDropdownItems",
                         "line": 37
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 115,
+                        "durationMicroseconds": 125,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 47
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 50,
-                        "durationMicroseconds": 166,
+                        "durationMicroseconds": 184,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 49
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 50,
-                        "durationMicroseconds": 142,
+                        "durationMicroseconds": 180,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 50
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 15,
-                        "durationMicroseconds": 95,
+                        "durationMicroseconds": 113,
                         "errorMessage": "Cannot access value for name itemwidth",
                         "functionName": "width",
                         "line": 68
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 138,
+                        "durationMicroseconds": 159,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 67
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 21,
-                        "durationMicroseconds": 96,
+                        "durationMicroseconds": 151,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 75
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 214,
+                        "durationMicroseconds": 202,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 76
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 19,
-                        "durationMicroseconds": 169,
+                        "durationMicroseconds": 185,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 89
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 16,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 324,
                         "errorMessage": "Cannot access value for name itemwidth",
                         "functionName": "width",
                         "line": 101
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 19,
-                        "durationMicroseconds": 444,
+                        "durationMicroseconds": 722,
                         "errorMessage": "Cannot access value for name index",
                         "functionName": "isActive",
                         "line": 107
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 152,
+                        "durationMicroseconds": 217,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 99
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 15,
-                        "durationMicroseconds": 75,
+                        "durationMicroseconds": 85,
                         "errorMessage": "Cannot access value for name itemwidth",
                         "functionName": "width",
                         "line": 196
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 106,
+                        "durationMicroseconds": 117,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 197
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 131,
+                        "durationMicroseconds": 138,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 194
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 141,
+                        "durationMicroseconds": 142,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 198
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 26,
-                        "durationMicroseconds": 135,
+                        "durationMicroseconds": 172,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 199
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 165,
+                        "durationMicroseconds": 112,
                         "errorMessage": "",
                         "functionName": "model",
                         "line": 249
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 115,
+                        "durationMicroseconds": 150,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 251
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 27,
-                        "durationMicroseconds": 1558,
+                        "durationMicroseconds": 738,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "menuText",
                         "line": 253
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 27,
-                        "durationMicroseconds": 495,
+                        "durationMicroseconds": 630,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "menuIcon",
                         "line": 254
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 770,
+                        "durationMicroseconds": 689,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "onClicked",
                         "line": 260
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 171,
+                        "durationMicroseconds": 250,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 258
@@ -222,7 +222,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 147,
+                        "durationMicroseconds": 189,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 259
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 118,
+                        "durationMicroseconds": 156,
                         "errorMessage": "",
                         "functionName": "model",
                         "line": 287
@@ -246,7 +246,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 105,
+                        "durationMicroseconds": 150,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 289
@@ -254,7 +254,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 27,
-                        "durationMicroseconds": 556,
+                        "durationMicroseconds": 552,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "menuText",
                         "line": 291
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 27,
-                        "durationMicroseconds": 493,
+                        "durationMicroseconds": 490,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "menuIcon",
                         "line": 292
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 566,
+                        "durationMicroseconds": 676,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "onClicked",
                         "line": 298
@@ -278,7 +278,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 152,
+                        "durationMicroseconds": 353,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 296
@@ -286,7 +286,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 325,
+                        "durationMicroseconds": 142,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 297

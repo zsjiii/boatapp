@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 12,
-                        "durationMicroseconds": 419,
+                        "durationMicroseconds": 506,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "width",
                         "line": 6
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 13,
-                        "durationMicroseconds": 191,
+                        "durationMicroseconds": 321,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "height",
                         "line": 7
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 16,
-                        "durationMicroseconds": 77,
+                        "durationMicroseconds": 85,
                         "errorMessage": "Cannot access value for name isActive",
                         "functionName": "color",
                         "line": 15
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 154,
+                        "durationMicroseconds": 193,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 14
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 120,
+                        "durationMicroseconds": 143,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 20
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 22,
-                        "durationMicroseconds": 29,
+                        "durationMicroseconds": 38,
                         "errorMessage": "Cannot access value for name isActive",
                         "functionName": "visible",
                         "line": 24
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 160,
+                        "durationMicroseconds": 181,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 23
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 110,
+                        "durationMicroseconds": 98,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 29
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 21,
-                        "durationMicroseconds": 31,
+                        "durationMicroseconds": 46,
                         "errorMessage": "Cannot access value for name tabIcon",
                         "functionName": "source",
                         "line": 34
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 37,
-                        "durationMicroseconds": 189,
+                        "durationMicroseconds": 173,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 36
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 37,
-                        "durationMicroseconds": 100,
+                        "durationMicroseconds": 153,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 40
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 23,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 51,
                         "errorMessage": "Cannot access value for name tabTitle",
                         "functionName": "text",
                         "line": 44
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 23,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 48,
                         "errorMessage": "Cannot access value for name tabDescription",
                         "functionName": "text",
                         "line": 51
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 67,
+                        "durationMicroseconds": 73,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 61
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 73,
+                        "durationMicroseconds": 111,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 60

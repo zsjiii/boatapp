@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 490,
+                        "durationMicroseconds": 569,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 13
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 286,
+                        "durationMicroseconds": 260,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 14
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 193,
+                        "durationMicroseconds": 180,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 15
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 119,
+                        "durationMicroseconds": 123,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 12
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 46,
-                        "durationMicroseconds": 192,
+                        "durationMicroseconds": 204,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 21
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 44,
-                        "durationMicroseconds": 162,
+                        "durationMicroseconds": 173,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 22

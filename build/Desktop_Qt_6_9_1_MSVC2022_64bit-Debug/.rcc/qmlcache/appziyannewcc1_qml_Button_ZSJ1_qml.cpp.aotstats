@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 16,
-                        "durationMicroseconds": 243,
+                        "durationMicroseconds": 393,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "color",
                         "line": 15
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 31,
-                        "durationMicroseconds": 69,
+                        "durationMicroseconds": 19,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "centerIn",
                         "line": 24
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 19,
-                        "durationMicroseconds": 64,
+                        "durationMicroseconds": 31,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "when",
                         "line": 50
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 25,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 9,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "target",
                         "line": 52

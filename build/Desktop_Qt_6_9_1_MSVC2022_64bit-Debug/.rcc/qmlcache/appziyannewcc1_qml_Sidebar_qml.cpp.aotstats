@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 378,
+                        "durationMicroseconds": 521,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 23
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 178,
+                        "durationMicroseconds": 185,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 24
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 136,
+                        "durationMicroseconds": 128,
                         "errorMessage": "",
                         "functionName": "bottom",
                         "line": 25
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 46,
-                        "durationMicroseconds": 153,
+                        "durationMicroseconds": 143,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 29
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 44,
-                        "durationMicroseconds": 151,
+                        "durationMicroseconds": 145,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 30
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 143,
+                        "durationMicroseconds": 154,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 38
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 1271,
+                        "durationMicroseconds": 302,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 43
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 150,
+                        "durationMicroseconds": 186,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 42
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 16,
-                        "durationMicroseconds": 208,
+                        "durationMicroseconds": 176,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 52
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 17,
-                        "durationMicroseconds": 533,
+                        "durationMicroseconds": 570,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 53
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 32,
-                        "durationMicroseconds": 234,
+                        "durationMicroseconds": 470,
                         "errorMessage": "",
                         "functionName": "onCurrentIndexChanged",
                         "line": 91
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 184,
+                        "durationMicroseconds": 180,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 51
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 20,
-                        "durationMicroseconds": 131,
+                        "durationMicroseconds": 130,
                         "errorMessage": "Cannot access value for name menu",
                         "functionName": "width",
                         "line": 68
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 19,
-                        "durationMicroseconds": 519,
+                        "durationMicroseconds": 672,
                         "errorMessage": "Cannot access value for name labelText",
                         "functionName": "text",
                         "line": 70
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 25,
-                        "durationMicroseconds": 439,
+                        "durationMicroseconds": 476,
                         "errorMessage": "Cannot access value for name labelIcon",
                         "functionName": "iconSource",
                         "line": 71
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 878,
+                        "durationMicroseconds": 16442,
                         "errorMessage": "Cannot access value for name listView",
                         "functionName": "onClicked",
                         "line": 76
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 480,
+                        "durationMicroseconds": 491,
                         "errorMessage": "Cannot access value for name listView",
                         "functionName": "onEntered",
                         "line": 81
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 181,
+                        "durationMicroseconds": 212,
                         "errorMessage": "",
                         "functionName": "onExited",
                         "line": 82
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 92,
+                        "durationMicroseconds": 158,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 74

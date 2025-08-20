@@ -4,11 +4,12 @@
 #include "udpmanager.h"
 #include "QFile"
 #include <QDirIterator>
-
+#include <QtWebEngineQuick>
 int main(int argc, char *argv[])
 {
     // 强制使用特定 OpenGL 版本
     qputenv("QT_OPENGL", "desktop");
+    QtWebEngineQuick::initialize();
     QGuiApplication a(argc, argv);
 
     // Set up code that uses the Qt event loop here.

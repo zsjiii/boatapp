@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 492,
+                        "durationMicroseconds": 449,
                         "errorMessage": "",
                         "functionName": "cellWidth",
                         "line": 16
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 21,
-                        "durationMicroseconds": 229,
+                        "durationMicroseconds": 217,
                         "errorMessage": "",
                         "functionName": "cellHeight",
                         "line": 17
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 114,
+                        "durationMicroseconds": 249,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 14
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 29,
-                        "durationMicroseconds": 203,
+                        "durationMicroseconds": 231,
                         "errorMessage": "",
                         "functionName": "leftMargin",
                         "line": 15
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 20,
-                        "durationMicroseconds": 189,
+                        "durationMicroseconds": 109,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "width",
                         "line": 32
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 21,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 180,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "height",
                         "line": 33
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 27,
-                        "durationMicroseconds": 519,
+                        "durationMicroseconds": 693,
                         "errorMessage": "Cannot access value for name topInit",
                         "functionName": "backTopColor",
                         "line": 34
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 30,
-                        "durationMicroseconds": 514,
+                        "durationMicroseconds": 633,
                         "errorMessage": "Cannot access value for name bottomInit",
                         "functionName": "backBottomColor",
                         "line": 35
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 30,
-                        "durationMicroseconds": 153,
+                        "durationMicroseconds": 107,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "margins",
                         "line": 31
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 821,
+                        "durationMicroseconds": 880,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "onClicked",
                         "line": 39
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 31,
-                        "durationMicroseconds": 160,
+                        "durationMicroseconds": 129,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 38
