@@ -20,13 +20,14 @@ ColumnLayout {
         Text {
             text: label
             color: "#7f8c8d"
-            font.pixelSize: 14
+            font.pixelSize: 22
             Layout.fillWidth: true
         }
 
         Text {
             text: value.toFixed(1) + " " + unit
             color: "#3498db"
+            font.pixelSize: 18
             font.bold: true
         }
     }
@@ -45,8 +46,8 @@ ColumnLayout {
         background: Rectangle {
             x: parent.leftPadding
             y: parent.topPadding + parent.availableHeight / 2 - height / 2
-            implicitWidth: 200
-            implicitHeight: 4
+            implicitWidth: 400
+            implicitHeight: 10
             width: parent.availableWidth
             height: implicitHeight
             radius: 2

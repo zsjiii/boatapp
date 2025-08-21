@@ -8,24 +8,29 @@ Rectangle{
     id: root
     color: "#80444444"
     border.color: "white"
-    radius: height / listModel.count / 2
+    radius: height / 2 // listModel.count / 2
 
     ListView{
         id: listView
         anchors.fill: parent
+        orientation: ListView.Horizontal  // 关键：设置为横向排列
+        //spacing: 0  // 添加选项间距
 
         model: root.listModel
 
         // 单选元素
         delegate: Item {
-            width: root.width
-            height: root.height / root.listModel.count
+            width: root.width / root.listModel.count  // 等分宽度
+            height: root.height // root.listModel.count
 
             // 圆点
             Item {
                 id: btn
-                width: parent.height
+                width: parent.height * 0.6 // 根据高度调整
                 height: width
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.top: parent.top
+                anchors.topMargin: parent.height * 0.1
 
                 Rectangle{
                     anchors.centerIn: parent
@@ -46,15 +51,18 @@ Rectangle{
 
             // 单选文字
             Text {
-                anchors.left: btn.right
-                height: parent.height
+                anchors.top: btn.bottom
+                anchors.topMargin: 5
+                anchors.horizontalCenter: parent.horizontalCenter
+                //anchors.left: btn.right
+                //height: parent.height
                 text: labelText
                 verticalAlignment: Text.AlignVCenter
                 color: "white"
                 // font.family: "华文彩云"
                 style: Text.Outline
                 styleColor: "steelblue"
-                font.pixelSize: parent.height / 2
+                font.pixelSize: parent.height * 0.3  // 根据高度调整字体
             }
 
             MouseArea{
@@ -72,8 +80,8 @@ Rectangle{
         id: highlightComponent
 
         Rectangle{
-            width: root.width
-            height: root.height / root.listModel.count
+            width: root.width / root.listModel.count  // 等分宽度 //root.width
+            height: root.height // root.listModel.count
             color: "#40ffffff"
             radius: height / 2
         }

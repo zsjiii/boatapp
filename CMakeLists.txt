@@ -26,7 +26,7 @@ qt_standard_project_setup(REQUIRES 6.8)
 
 qt_add_executable(appziyannewcc1_qml
     main.cpp
-    crc16.cpp crc16.h define.h serialportmanager.cpp serialportmanager.h udpmanager.cpp udpmanager.h
+    crc16.cpp crc16.h define.h cmd_send.h serialportmanager.cpp serialportmanager.h udpmanager.cpp cmd_send.cpp udpmanager.h 
 
 )
 # 确保CMakeLists.txt包含资源
@@ -46,7 +46,7 @@ qt_add_qml_module(appziyannewcc1_qml
         QML_FILES Page2.qml
         QML_FILES Page3.qml
         QML_FILES Button_ZSJ1.qml LabeledSlider.qml
-        QML_FILES AreaEdit.qml BtnsPage.qml CheckBtn.qml CircleProgress.qml ClickBtn.qml EditPage.qml Instrument.qml LineEdit.qml Pages.qml ProgressesPage.qml RadioBtnCombobox.qml RippleProgress.qml Sidebar.qml SidebarItem.qml SkinItem.qml SkinPage.qml SliderProgress.qml SwitchBtn.qml Table.qml TablePage.qml
+        QML_FILES AreaEdit.qml BtnsPage.qml CheckBtn.qml CircleProgress.qml ClickBtn.qml EditPage.qml Instrument.qml LineEdit.qml Pages.qml ProgressesPage.qml RadioBtnCombobox.qml RippleProgress.qml Sidebar.qml SidebarItem.qml SkinItem.qml SkinPage.qml SliderProgress.qml SwitchBtn.qml MuSwitchBtn.qml Table.qml TablePage.qml
         QML_FILES Page_MAP.qml
         QML_FILES Topbar.qml
         QML_FILES MenuItem_ZSJ1.qml

@@ -6,15 +6,15 @@ import Qt5Compat.GraphicalEffects
 Item {
     id: root
     // width: parent.width
-    height: 70
+    //height: 70
 
     // 背景属性
     property color backTopColor: "#2c3e50"
     property color backBottomColor: "#1a2530"
     property bool menuExpanded: false
     property int currentIndex: 0
-    property int itemnum: 0
-    property int itemwidth: 100
+    property int itemnum: 10
+    property int itemwidth: width/(itemnum*2)
 
     // 菜单项数据
     property var menuItems: [
@@ -196,6 +196,162 @@ Item {
         //     }
         // }
 
+        Popup {
+            id: modeSelectionPopup
+            width: 400
+            height: 500
+            x: (parent.width - width) / 2
+            y: (parent.height - height) / 2
+            modal: true
+            focus: true
+            closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
+            padding: 20
+
+            background: Rectangle {
+                color: "white"
+                radius: 12
+                border.color: "#ddd"
+                border.width: 1
+            }
+
+            ColumnLayout {
+                anchors.fill: parent
+                spacing: 15
+
+                // 标题
+                Text {
+                    text: "选择航行模式"
+                    font.pixelSize: 22
+                    font.bold: true
+                    color: "#2c3e50"
+                    Layout.alignment: Qt.AlignHCenter
+                }
+
+                // 分隔线
+                Rectangle {
+                    Layout.fillWidth: true
+                    height: 1
+                    color: "#ecf0f1"
+                }
+
+                // 模式列表
+                ListView {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    model: 4
+                    spacing: 10
+                    clip: true
+
+                    delegate: Rectangle {
+                        width: ListView.view.width
+                        height: 80
+                        color: index === currentIndex ? 
+                            (index === 3 ? "#fff3cd" : "#e3f2fd") : 
+                            (mouseArea.containsMouse ? "#f8f9fa" : "white")
+                        border.color: index === currentIndex ? 
+                                    (index === 3 ? "#ffc107" : "#2196f3") : 
+                                    "#e9ecef"
+                        radius: 8
+
+                        Row {
+                            anchors.fill: parent
+                            anchors.margins: 15
+                            spacing: 15
+                            anchors.verticalCenter: parent.verticalCenter
+
+                            // 模式图标
+                            Text {
+                                text: modeIcons[index]
+                                font.pixelSize: 28
+                                anchors.verticalCenter: parent.verticalCenter
+                            }
+
+                            // 模式信息
+                            Column {
+                                anchors.verticalCenter: parent.verticalCenter
+                                spacing: 5
+                                width: parent.width - 70
+
+                                Text {
+                                    text: flightModes[index]
+                                    font.pixelSize: 16
+                                    font.bold: true
+                                    color: index === currentIndex ? 
+                                        (index === 3 ? "#856404" : "#1976d2") : 
+                                        "#2c3e50"
+                                }
+
+                                Text {
+                                    text: modeDescriptions[index]
+                                    font.pixelSize: 12
+                                    color: index === currentIndex ? 
+                                        (index === 3 ? "#856404" : "#546e7a") : 
+                                        "#7f8c8d"
+                                    width: parent.width
+                                    wrapMode: Text.WordWrap
+                                }
+                            }
+
+                            // 选中标记
+                            Text {
+                                text: "✓"
+                                visible: index === currentIndex
+                                font.pixelSize: 18
+                                color: index === 3 ? "#856404" : "#1976d2"
+                                anchors.verticalCenter: parent.verticalCenter
+                                anchors.right: parent.right
+                            }
+                        }
+
+                        // 鼠标交互区域
+                        MouseArea {
+                            id: mouseArea
+                            anchors.fill: parent
+                            hoverEnabled: true
+                            onClicked: {
+                                currentIndex = index
+                                modeSelectionPopup.close()
+                                modeChangePopup.open()
+                                console.log("切换到模式:", flightModes[index])
+                            }
+                        }
+                    }
+                }
+
+                // 分隔线
+                Rectangle {
+                    Layout.fillWidth: true
+                    height: 1
+                    color: "#ecf0f1"
+                }
+
+                // 操作按钮
+                Row {
+                    Layout.alignment: Qt.AlignHCenter
+                    spacing: 15
+
+                    Button {
+                        text: "确认"
+                        onClicked: modeSelectionPopup.close()
+                        background: Rectangle {
+                            color: "#3498db"
+                            radius: 6
+                        }
+                        contentItem: Text {
+                            text: parent.text
+                            color: "white"
+                        }
+                    }
+
+                    Button {
+                        text: "取消"
+                        onClicked: modeSelectionPopup.close()
+                        flat: true
+                    }
+                }
+            }
+        }
+
         // 页面标签区域
         Rectangle {
             id: tabBar
@@ -216,25 +372,48 @@ Item {
                 spacing: 0
 
                 TabItem_ZSJ1 {
-                    tabTitle: "连接状态(地面站)"
-                    tabIcon: ""
-                    tabDescription: "正常"
-                }
-
-                TabItem_ZSJ1 {
                     tabTitle: "解锁状态"
                     tabIcon: ""
-                    tabDescription: "正常"
+                    tabDescription: "🔑"//🔑🔓
+                    onClicked: {
+                    // 显示数字选择弹窗
+                       //unlockPopup.open()
+                        cmdSed.Ctrl_Cmd_Send(0x04,0x01)
+                        //cmdSed.Ctrl_Cmd_Send(0x04,0x02)
+                    }
                 }
 
                 TabItem_ZSJ1 {
-                    tabTitle: "航线状态"
+                    tabTitle: "航行状态"
                     tabIcon: ""
-                    tabDescription: "正常"
+                    tabDescription: "悬停"
+                    onClicked: {
+                    // 显示数字选择弹窗
+                        modeSelectionPopup.open()
+                    }
+                }
+
+                //TabItem_ZSJ1 {
+                //    tabTitle: "控制模式"
+                //    tabIcon: ""
+                //    tabDescription: "无人控制"
+                //}
+
+                TabItem_ZSJ1 {
+                    tabTitle: "经纬度"
+                    tabIcon: ""
+                    tabDescription: "120"
                 }
 
                 TabItem_ZSJ1 {
                     tabTitle: "水深"
+                    tabIcon: ""
+                    tabDescription: "0"
+                    isActive: true
+                }
+
+                TabItem_ZSJ1 {
+                    tabTitle: "航速"
                     tabIcon: ""
                     tabDescription: "0"
                     isActive: true
@@ -255,6 +434,13 @@ Item {
                 }
 
                 TabItem_ZSJ1 {
+                    tabTitle: "转速"
+                    tabIcon: ""
+                    tabDescription: "0"
+                    isActive: true
+                }
+
+                TabItem_ZSJ1 {
                     tabTitle: "距离"
                     tabIcon: ""
                     tabDescription: "0"
@@ -262,9 +448,9 @@ Item {
                 }
 
                 TabItem_ZSJ1 {
-                    tabTitle: "经纬度"
+                    tabTitle: "连接状态(地面站)"
                     tabIcon: ""
-                    tabDescription: "120"
+                    tabDescription: "正常"
                 }
 
             }

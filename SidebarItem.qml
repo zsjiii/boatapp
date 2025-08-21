@@ -18,7 +18,7 @@ Rectangle {
     clip: true
 
     // 图标
-    Image {
+    /*Image {
         id: icon
         width: root.height
         height: root.height
@@ -31,19 +31,21 @@ Rectangle {
         //         console.log("Error string:", icon.errorString());
         //     }
         // }
-    }
+    }*/
 
     // 描述
     Text {
-        anchors.left: icon.right
+        //anchors.left: root.left
         width: root.height
         height: root.height
-        horizontalAlignment: Text.AlignHCenter
+        anchors.left: root.left
+        anchors.leftMargin: 5
+        //horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         color: "white"
         style: Text.Outline
         styleColor: "steelblue"
-        font.pixelSize: root.height / 4
+        font.pixelSize: root.height / 3
         text: root.text
     }
 }

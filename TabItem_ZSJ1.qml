@@ -9,6 +9,10 @@ Item {
     property string tabIcon: "•"
     property string tabDescription: "描述"
     property bool isActive: true
+    property int tabIndex: 0 // 新增：每个标签的索引标识
+
+    // 添加clicked信号
+    signal clicked(int index)
 
     Rectangle {
         anchors.fill: parent
@@ -30,9 +34,9 @@ Item {
         //anchors.leftMargin: 15
         //spacing: 10
 
-        Image {
-            source: tabIcon
-
+        Text { // 将Image改为Text显示图标
+            text: tabIcon
+            font.pixelSize: 16
             anchors.verticalCenter: parent.verticalCenter
         }
 
@@ -43,7 +47,7 @@ Item {
             Text {
                 text: tabTitle
                 font.pixelSize: 14
-                font.bold: true
+                font.bold: isActive
                 color: "#343a40"
             }
 
@@ -59,6 +63,8 @@ Item {
     MouseArea {
         anchors.fill: parent
         onClicked: {
+            // 发出点击信号，携带当前标签的索引
+            tabItem.clicked(tabIndex)
             // 这里可以添加标签点击逻辑
         }
     }

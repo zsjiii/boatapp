@@ -1,10 +1,12 @@
 #include <QGuiApplication>
 #include <QQmlContext>
 #include <QQmlApplicationEngine>
+#include <memory>
 #include "serialportmanager.h"
 #include "udpmanager.h"
 #include "QFile"
 #include <QDirIterator>
+#include "cmd_send.h"
 
 int main(int argc, char *argv[])
 {
@@ -24,6 +26,9 @@ int main(int argc, char *argv[])
     // If you do not need a running Qt event loop, remove the call
     // to  exec() or use the Non-Qt Plain C++ Application template.
 
+    //CMD_Send* p = new CMD_Send();
+    std::unique_ptr<CMD_Send> p = std::make_unique<CMD_Send>();
+
     // 注册UDP管理器
     //qmlRegisterType<UdpManager>("Network", 1, 0, "UdpManager");
     // qmlRegisterSingletonType<UdpManager>("Network", 1, 0, "UdpManager", 
@@ -40,7 +45,8 @@ int main(int argc, char *argv[])
         &a,
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
-    engine.rootContext()->setContextProperty("udpManager", &UdpManager::instance());
+    engine.rootContext()->setContextProperty("udpManager", p->m_udpcmdsend);
+    engine.rootContext()->setContextProperty("cmdSend", p.get());
 
 
     // 检查屏幕数量

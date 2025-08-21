@@ -35,7 +35,7 @@ bool UdpManager::sendData(const QString &data, const QString &address, quint16 p
 
 void  UdpManager::slot_sendData(uchar *hdata,qint16 size,int id)
 {
-    m_udpSocket->writeDatagram((const char*)hdata,size,QHostAddress("192.168.3.25"),8001);
+    m_udpSocket->writeDatagram((const char*)hdata,size,QHostAddress("192.168.18.87"),10600);
 }
 
 void UdpManager::onReadyRead()

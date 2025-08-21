@@ -1,13 +1,17 @@
 import QtQuick
 
-// 开关按钮
 Rectangle {
+    id: root
+    
+    // 属性定义
     property color checkColor: "green"
     property bool isChecked: false
     property string labelTextoff: "关"
     property string labelTexton: "开"
-    id: root
-    signal clicked(bool checked) // 添加点击信号
+    
+    // 添加一个信号，用于通知外部按钮被点击
+    signal clicked()
+    
     radius: height / 2
     color: root.isChecked ? root.checkColor : "#606060"
     border.color: Qt.lighter(color)
@@ -34,6 +38,7 @@ Rectangle {
             }
         }
     }
+    
     Item {
         anchors.left: root.isChecked ?  root.left : buttoncircle.right
         anchors.right: root.isChecked ?  buttoncircle.left : parent.right
@@ -49,11 +54,11 @@ Rectangle {
             text: root.isChecked ? root.labelTexton : root.labelTextoff
         }
     }
+    
     MouseArea{
         anchors.fill: parent
         onClicked: {
-            root.isChecked = !root.isChecked //有人：0x00 无人：0x01
-            root.clicked(root.isChecked) // 发出信号
+            root.clicked() // 发出点击信号，让外部处理互斥逻辑
         }
     }
 }

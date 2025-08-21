@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Window
 import QtQuick.Controls
+//import QtQuick.Layouts 
 
 // 自定义无边框窗口
 /*
@@ -58,9 +59,11 @@ Window{
         //顶部菜单
         Topbar{
             id: topbar
-            anchors.left: parent.left
+            anchors.left: sidebar.right
+            anchors.right: parent.right
             anchors.bottom: parent.bottom
-            width: parent.width - parent.width/8
+            anchors.bottomMargin: 5  // 添加这行，设置底部边距为5像素
+            //width: parent.width - parent.width/8
             height: parent.height/20
             z: 1
             //onCurrentIndexChanged: pages.pageIndex = currentIndex//这里链接着侧边栏图标和pages页面的切换
@@ -70,7 +73,7 @@ Window{
         // 侧边栏
         Sidebar{
             id: sidebar
-            width: sidebarChecked || mainWindow.visibility == mainWindow.Maximized || mainWindow.isHalfScreen ? 40 : 40
+            width: 70// sidebarChecked || mainWindow.visibility == mainWindow.Maximized || mainWindow.isHalfScreen ? 40 : 40
             height: parent.height - topbar.height
             anchors.top: titleBar.bottom
             onCurrentIndexChanged: pages.pageIndex = currentIndex//这里链接着侧边栏图标和pages页面的切换
@@ -151,14 +154,14 @@ Window{
                     //     }
                     // }
                 }
-                Text {
+                /*Text {
                     text: "天宇智远"
                     width:parent.width/2
                     color: "white"
                     font.pixelSize: 16
                     font.bold: true
                     //anchors.verticalCenter: parent.verticalCenter
-                }
+                }*/
             }
 
 
@@ -276,65 +279,359 @@ Window{
         }
 
         Row {
+            id: controlbar
             spacing: 30  // 控制菜单之间的间距
             anchors.left: sidebar.right  // 左侧对齐 Sidebar 右侧
             anchors.right: parent.right  // 右侧对齐父项
-            anchors.top: titleBar.bottom      // 顶部对齐父项（不再依赖 topbar）
+            anchors.bottom: topbar.top   // 顶部对齐父项（不再依赖 topbar）
             z: 1
 
+            //启停按钮
+            Column {
+                id: starstop
+                anchors.left: parent.left
+                leftPadding: 5 // 添加左侧间距
+                bottomPadding: 5
+                spacing: 20
+
+                SwitchBtn{
+                    width: 100
+                    height: 40
+                    checkColor: "#80d080"
+                    labelTextoff: "有人"
+                    labelTexton: "无人"
+                    onClicked: function(isChecked) {
+                        if(isChecked){
+                            cmdSend.Ctrl_Cmd_Send(0x14, 0x01); // 无人
+                        } else {
+                            cmdSend.Ctrl_Cmd_Send(0x14, 0x00); // 有人
+                        }
+                        // 注意：这里不需要再切换 isChecked，因为组件内部已经处理了
+                    }
+                } // 绿 有人：0x00 无人：0x01
+                SwitchBtn{
+                    width: 100
+                    height: 40
+                    checkColor: "#daa520"
+                    labelTextoff: "停车"
+                    labelTexton: "启动"
+                    onClicked: function(isChecked) {
+                        if(isChecked){
+                            cmdSend.Ctrl_Cmd_Send(0x0c, 0x01); // 启动
+                        } else {
+                            cmdSend.Ctrl_Cmd_Send(0x0c, 0x04); // 停车
+                        }
+                        // 注意：这里不需要再切换 isChecked，因为组件内部已经处理了
+                    }
+                }
+                SwitchBtn{
+                    width: 100
+                    height: 40
+                    checkColor: "#87ceeb"
+                    labelTextoff: "油机"
+                    labelTexton: "电推"
+                    onClicked: function(isChecked) {
+                        if(isChecked){
+                            cmdSend.Ctrl_Cmd_Send(0x14, 0x01); // 无人
+                        } else {
+                            cmdSend.Ctrl_Cmd_Send(0x14, 0x00); // 有人
+                        }
+                        // 注意：这里不需要再切换 isChecked，因为组件内部已经处理了
+                    }
+                }
+                //SwitchBtn{width: 100; height: 40; checkColor: "#daa520"; labelTextoff: "停车"; labelTexton: "启动"} // 黄
+                //SwitchBtn{width: 100; height: 40; checkColor: "#87ceeb"; labelTextoff: "油机"; labelTexton: "电推"} // 蓝
+                //SwitchBtn{width: 100; height: 40; checkColor: "#ffd0d0"} // 粉
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 5
+            }
+
+            Column{
+                anchors.left: starstop.right
+                //anchors.centerIn: parent // 使用centerIn实现居中
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 5
+                leftPadding: 5 // 添加左侧间距
+                bottomPadding: 5
+                spacing: 5
+                Instrument{
+                    height: 90
+                    width: height*2
+                }
+                Row{
+                    spacing: 5
+                    Button {
+                        id: throttleUp
+                        text: "油机升"
+                        width: 70
+                        height: 60
+                        font.pixelSize: 18
+                        
+                        background: Rectangle {
+                            color: parent.pressed ? "#4CAF50" : "#8BC34A"
+                            radius: 5
+                        }
+                        
+                        onClicked: {
+                            // 增加油门逻辑
+                        }
+                    }
+
+                    Text{
+                        text:"50"
+                        font.pixelSize: 36
+                        font.bold: true
+                        color: "lightblue"
+                    }
+                
+                    Button {
+                        id: throttleDown
+                        text: "油机降"
+                        width: 70
+                        height: 60
+                        font.pixelSize: 18
+                        
+                        background: Rectangle {
+                            color: parent.pressed ? "#F44336" : "#FF5722"
+                            radius: 5
+                        }
+                        
+                        onClicked: {
+                            // 减少油门逻辑
+                        }
+                    }
+                }
+            }
+
+            Column{
+                anchors.horizontalCenter: parent.horizontalCenter // 水平居中
+                //anchors.left: starstop.right
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 5
+                leftPadding: 5 // 添加左侧间距
+                bottomPadding: 5
+                spacing: 5
+                Instrument{
+                    height: 90
+                    width: height*2
+                }
+                Row{
+                    spacing: 10
+                    Button {
+                        id: leftBtn
+                        text: "←"
+                        width: 60
+                        height: 60
+                        font.pixelSize: 24
+                        onClicked:{
+                            cmdSend.Ctrl_Float_Send(0x0a,1)
+                        }
+                    }
+
+                    Text{
+                        text:"50"
+                        font.pixelSize: 36
+                        font.bold: true
+                        color: "lightgreen"
+                    }
+
+                    Button {
+                        id: rightBtn
+                        text: "→"
+                        width: 60
+                        height: 60
+                        font.pixelSize: 24
+                        onClicked:{
+                            cmdSend.Ctrl_Float_Send(0x0a,1)
+                        }
+                    }
+                }
+            }
+
+            Item {
+                id: switchManager
+                property var buttons: [switch1, switch2, switch3]
+                property int currentIndex: 1
+
+                Component.onCompleted: {
+                    // 初始化状态，确保只有一个按钮被选中
+                    for (var i = 0; i < buttons.length; i++) {
+                        buttons[i].isChecked = (i === currentIndex)
+                    }
+                }
+                
+                // 当按钮被点击时调用
+                function onButtonClicked(index) {
+                    // 如果点击的不是当前选中的按钮，则切换到该按钮
+                    if (currentIndex !== index) {
+                        buttons[currentIndex].isChecked = false
+                        buttons[index].isChecked = true
+                        currentIndex = index
+                    }
+                    // 如果点击的是当前选中的按钮，什么都不做（保持选中状态）
+                }
+            }
+            //RadioBtnCombobox{
+            //    anchors.bottom: parent.bottom
+            //    anchors.bottomMargin: 5
+            //    anchors.right: throttle.left
+            //    width: 300
+            //    height: 100
+            //    checkColor: "#ffd0d0"
+            //    listModel: ListModel{
+            //        ListElement{labelText: "前进"}
+            //        ListElement{labelText: "空挡"}
+            //        ListElement{labelText: "后退"}
+            //    }
+            //}
+
+            Column {
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 5
+                anchors.right: throttle.left
+                spacing: 20
+
+                // 开关按钮1
+                MuSwitchBtn {
+                    id: switch1
+                    width: 100; 
+                    height: 40; 
+                    checkColor: "#80d080"; 
+                    labelTexton: "前进"
+                    labelTextoff: ""
+                    
+                    onClicked: {
+                        switchManager.onButtonClicked(0)
+                        cmdSend.Ctrl_Cmd_Send(0x06, 0x01)
+                    }
+                }
+
+                // 开关按钮2
+                MuSwitchBtn {
+                    id: switch2
+                    width: 100; 
+                    height: 40; 
+                    checkColor: "#daa520";
+                    labelTexton: "空档"
+                    labelTextoff: ""
+                    onClicked: {
+                        switchManager.onButtonClicked(1)
+                        cmdSend.Ctrl_Cmd_Send(0x06, 0x02)
+                    }
+                }
+
+                // 开关按钮3
+                MuSwitchBtn {
+                    id: switch3
+                    width: 100; 
+                    height: 40; 
+                    checkColor: "#87ceeb";
+                    labelTexton: "后退"
+                    labelTextoff: ""
+                    
+                    onClicked: {
+                        switchManager.onButtonClicked(2)
+                        cmdSend.Ctrl_Cmd_Send(0x06, 0x03)
+                    }
+                }
+            }
+
+            Column{
+                id: throttle
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 5
+                anchors.right: parent.right
+                leftPadding: 5 // 添加左侧间距
+                bottomPadding: 5
+                spacing: 5
+                Instrument{
+                    height: 90
+                    width: height*2
+                }
+                Row{
+                    spacing: 10
+                    Button {
+                        id: forwardBtn
+                        text: "↓"
+                        width: 60
+                        height: 60
+                        font.pixelSize: 24
+                        onClicked:{
+                            cmdSend.Ctrl_Cmd_Send(0x08,2)
+                        }
+                    }
+                    Text{
+                        text:"50"
+                        font.pixelSize: 36
+                        font.bold: true
+                        color: "pink"
+                    }
+                    Button {
+                        id: backwardBtn
+                        text: "↑"
+                        width: 60
+                        height: 60
+                        font.pixelSize: 24
+                        onClicked:{
+                            cmdSend.Ctrl_Cmd_Send(0x08,2)
+                        }
+                    }
+                }
+            }
+
             // 无人控制切换菜单
-            Row {
-                spacing: 10
-                Label {
-                    text: "控制模式:"
-                    anchors.verticalCenter: parent.verticalCenter
-                }
-                ComboBox {
-                    id: controlModeCombo
-                    width: 150
-                    model: ["有人控制", "无人控制"]
-                    currentIndex: 0
-                    onCurrentIndexChanged: {
-                        console.log("控制模式更改为:", model[currentIndex])
-                    }
-                }
-            }
+            //Row {
+            //    spacing: 10
+            //    Label {
+            //        text: "控制模式:"
+            //        anchors.verticalCenter: parent.verticalCenter
+            //    }
+            //    ComboBox {
+            //        id: controlModeCombo
+            //        width: 150
+            //        model: ["有人控制", "无人控制"]
+            //        currentIndex: 0
+            //        onCurrentIndexChanged: {
+            //            console.log("控制模式更改为:", model[currentIndex])
+            //        }
+            //    }
+            //}
 
-            // 动力类型切换菜单
-            Row {
-                spacing: 10
-                Label {
-                    text: "动力类型:"
-                    anchors.verticalCenter: parent.verticalCenter
-                }
-                ComboBox {
-                    id: powerTypeCombo
-                    width: 150
-                    model: ["电推", "油机"]
-                    currentIndex: 0
-                    onCurrentIndexChanged: {
-                        console.log("动力类型更改为:", model[currentIndex])
-                    }
-                }
-            }
+            //// 动力类型切换菜单
+            //Row {
+            //    spacing: 10
+            //    Label {
+            //        text: "动力类型:"
+            //        anchors.verticalCenter: parent.verticalCenter
+            //    }
+            //    ComboBox {
+            //        id: powerTypeCombo
+            //        width: 150
+            //        model: ["电推", "油机"]
+            //        currentIndex: 0
+            //        onCurrentIndexChanged: {
+            //            console.log("动力类型更改为:", model[currentIndex])
+            //        }
+            //    }
+            //}
 
-            // 摄像头切换菜单
-            Row {
-                spacing: 10
-                Label {
-                    text: "摄像头:"
-                    anchors.verticalCenter: parent.verticalCenter
-                }
-                ComboBox {
-                    id: cameraCombo
-                    width: 150
-                    model: ["前", "后", "左", "右"]
-                    currentIndex: 0
-                    onCurrentIndexChanged: {
-                        console.log("摄像头切换为:", model[currentIndex])
-                    }
-                }
-            }
+            //// 摄像头切换菜单
+            //Row {
+            //    spacing: 10
+            //    Label {
+            //        text: "摄像头:"
+            //        anchors.verticalCenter: parent.verticalCenter
+            //    }
+            //    ComboBox {
+            //        id: cameraCombo
+            //        width: 150
+            //        model: ["前", "后", "左", "右"]
+            //        currentIndex: 0
+            //        onCurrentIndexChanged: {
+            //            console.log("摄像头切换为:", model[currentIndex])
+            //        }
+            //    }
+            //}
         }
 
         // 主题页面

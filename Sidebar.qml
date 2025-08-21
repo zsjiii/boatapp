@@ -21,6 +21,7 @@ Item {
         color: "transparent"
         //radius: 20
         width: root.width
+        //anchors.right: root.right
         anchors.top: root.top
         anchors.bottom: root.bottom
         border.color: "#80ffffff"
@@ -31,7 +32,7 @@ Item {
         }
     }
 
-    SidebarItem{
+    /*SidebarItem{
         id: menu
         width: root.width
         height: 40
@@ -42,15 +43,16 @@ Item {
             anchors.fill: parent
             onClicked: root.sidebarChecked = !root.sidebarChecked
         }
-    }
+    }*/
 
     // 页面标签
     ListView{
         id: listView
         //anchors.centerIn: parent
-        anchors.top: menu.bottom
+        //anchors.right: root.right
+        anchors.top: root.top//menu.bottom
         width: root.width
-        height: Math.min(listView.count * menu.height, root.height)
+        height: root.height//Math.min(listView.count * 40, root.height)
         clip: true
         // focus: true
 
@@ -60,15 +62,23 @@ Item {
             ListElement{labelText: "进度条"; labelIcon: "qrc:/image/res/progress.png"}
             ListElement{labelText: "编辑"; labelIcon: "qrc:/image/res/edit.png"}
             ListElement{labelText: "表格"; labelIcon: "qrc:/image/res/table.png"}
+            ListElement{labelText: "home点"; }
+            ListElement{labelText: "航点设置"; }
+            ListElement{labelText: "返航"; }
+            ListElement{labelText: "任务暂停"; }
+            ListElement{labelText: "任务删除"; }
+            ListElement{labelText: "定速巡航"; }
         }
 
         // 侧边栏部件
         delegate: SidebarItem{
             id: siderbarItem
-            width: menu.width
-            height: menu.height
+            width: root.width
+            height: 40
+            //anchors.left: root.left
+            //anchors.leftMargin: 10
             text: labelText
-            iconSource: labelIcon
+            //iconSource: labelIcon
 
             MouseArea{
                 anchors.fill: parent
