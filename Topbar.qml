@@ -16,6 +16,9 @@ Item {
     property int itemnum: 10
     property int itemwidth: width/(itemnum*2)
 
+    // 定义4个飞行模式
+    property var flightModes: ["遥控", "自主航线", "一键返航", "悬停"] //0x01 遥控 0x11 自动巡航 0x12 返航 0x13 悬停 
+
     // 菜单项数据
     property var menuItems: [
         {name: "仪表盘", icon: "📊", color: "#3498db", hasDropdown: false},
@@ -200,8 +203,9 @@ Item {
             id: modeSelectionPopup
             width: 400
             height: 500
-            x: (parent.width - width) / 2
-            y: (parent.height - height) / 2
+            x: 0//(parent.width - width) / 2
+            y: -height //topbar.y - height - 20 //(parent.height - height) / 2
+            //anchors.bottom: topbar.top
             modal: true
             focus: true
             closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
@@ -260,11 +264,11 @@ Item {
                             anchors.verticalCenter: parent.verticalCenter
 
                             // 模式图标
-                            Text {
-                                text: modeIcons[index]
-                                font.pixelSize: 28
-                                anchors.verticalCenter: parent.verticalCenter
-                            }
+                            //Text {
+                            //    text: modeIcons[index]
+                            //    font.pixelSize: 28
+                            //    anchors.verticalCenter: parent.verticalCenter
+                            //}
 
                             // 模式信息
                             Column {
@@ -281,15 +285,15 @@ Item {
                                         "#2c3e50"
                                 }
 
-                                Text {
-                                    text: modeDescriptions[index]
-                                    font.pixelSize: 12
-                                    color: index === currentIndex ? 
-                                        (index === 3 ? "#856404" : "#546e7a") : 
-                                        "#7f8c8d"
-                                    width: parent.width
-                                    wrapMode: Text.WordWrap
-                                }
+                                //Text {
+                                //    text: modeDescriptions[index]
+                                //    font.pixelSize: 12
+                                //    color: index === currentIndex ? 
+                                //        (index === 3 ? "#856404" : "#546e7a") : 
+                                //        "#7f8c8d"
+                                //    width: parent.width
+                                //    wrapMode: Text.WordWrap
+                                //}
                             }
 
                             // 选中标记
@@ -311,7 +315,9 @@ Item {
                             onClicked: {
                                 currentIndex = index
                                 modeSelectionPopup.close()
-                                modeChangePopup.open()
+                                //modeChangePopup.open()
+                                //if(currentIndex === )
+                                cmdSend.Ctrl_Cmd_Send(0x14,0x10 + currentIndex) //0x01 遥控 0x11 自动巡航 0x12 返航 0x13 悬停  
                                 console.log("切换到模式:", flightModes[index])
                             }
                         }
@@ -384,9 +390,11 @@ Item {
                 }
 
                 TabItem_ZSJ1 {
+                    id: qwer
                     tabTitle: "航行状态"
                     tabIcon: ""
-                    tabDescription: "悬停"
+                    tabDescription: flightModes[currentIndex]
+                    //console.log("tabDescription:", flightModes[index])
                     onClicked: {
                     // 显示数字选择弹窗
                         modeSelectionPopup.open()
