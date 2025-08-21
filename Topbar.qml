@@ -12,6 +12,7 @@ Item {
     property color backTopColor: "#2c3e50"
     property color backBottomColor: "#1a2530"
     property bool menuExpanded: false
+    property bool unlockTabLocked: true
     property int currentIndex: 0
     property int itemnum: 10
     property int itemwidth: width/(itemnum*2)
@@ -380,12 +381,18 @@ Item {
                 TabItem_ZSJ1 {
                     tabTitle: "解锁状态"
                     tabIcon: ""
-                    tabDescription: "🔑"//🔑🔓
+                    tabDescription: unlockTabLocked ? "🔑" : "🔓"//🔑🔓
                     onClicked: {
-                    // 显示数字选择弹窗
-                       //unlockPopup.open()
-                        cmdSed.Ctrl_Cmd_Send(0x04,0x01)
-                        //cmdSed.Ctrl_Cmd_Send(0x04,0x02)
+                        // 切换状态
+                        unlockTabLocked = !unlockTabLocked
+                        // 发送相应的命令
+                        if (unlockTabLocked) {
+                            cmdSend.Ctrl_Cmd_Send(0x04,0x01) // 发送锁定命令
+                        } else {
+                            cmdSend.Ctrl_Cmd_Send(0x04, 0x02) // 发送解锁命令
+                        }
+                        //cmdSend.Ctrl_Cmd_Send(0x04,0x01)
+                        //cmdSend.Ctrl_Cmd_Send(0x04,0x02)
                     }
                 }
 
