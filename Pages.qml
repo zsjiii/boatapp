@@ -17,21 +17,21 @@ Item {
         //visible: root.pageIndex === 4
 
         // 进度条页面
-        DrongItem{
-            id:progressesPage
-            anchors.fill: parent
-            visible: root.pageIndex === 1
-        }
+        //DrongItem{
+        //    id:progressesPage
+        //    anchors.fill: parent
+        //    visible: root.pageIndex === 1
+        //}
         // 按钮页面
-        BtnsPage{
-            //anchors.fill: parent
-            anchors.bottom:  root.bottom
-            anchors.right: root.right
-            //anchors.fill: parent
-            width: root.width/4
-            height: root.height/2
-            visible: root.pageIndex === 0
-        }
+        //BtnsPage{
+        //    //anchors.fill: parent
+        //    anchors.bottom:  root.bottom
+        //    anchors.right: root.right
+        //    //anchors.fill: parent
+        //    width: root.width/4
+        //    height: root.height/2
+        //    visible: root.pageIndex === 0
+        //}
     }
 
     // 表格页面

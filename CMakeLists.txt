@@ -52,7 +52,7 @@ qt_add_qml_module(appziyannewcc1_qml
         QML_FILES MenuItem_ZSJ1.qml
         QML_FILES TabItem_ZSJ1.qml
         QML_FILES DrongItem.qml
-        QML_FILES canshusetPage.qml
+        QML_FILES canshusetPage.qml waypointsetPage.qml
 
 )
 

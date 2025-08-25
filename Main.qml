@@ -59,7 +59,7 @@ Window{
         //顶部菜单
         Topbar{
             id: topbar
-            anchors.left: sidebar.right
+            anchors.left: parent.left
             anchors.right: parent.right
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 5  // 添加这行，设置底部边距为5像素
@@ -71,15 +71,15 @@ Window{
             backBottomColor: mainWindow.backBottomColor
         }
         // 侧边栏
-        Sidebar{
-            id: sidebar
-            width: 70// sidebarChecked || mainWindow.visibility == mainWindow.Maximized || mainWindow.isHalfScreen ? 40 : 40
-            height: parent.height - topbar.height
-            anchors.top: titleBar.bottom
-            onCurrentIndexChanged: pages.pageIndex = currentIndex//这里链接着侧边栏图标和pages页面的切换
-            backTopColor: mainWindow.backTopColor
-            backBottomColor: mainWindow.backBottomColor
-        }
+        //Sidebar{
+        //    id: sidebar
+        //    width: 70// sidebarChecked || mainWindow.visibility == mainWindow.Maximized || mainWindow.isHalfScreen ? 40 : 40
+        //    height: parent.height - topbar.height
+        //    anchors.top: titleBar.bottom
+        //    onCurrentIndexChanged: pages.pageIndex = currentIndex//这里链接着侧边栏图标和pages页面的切换
+        //    backTopColor: "#ffffff00" //mainWindow.backTopColor #ffffff00
+        //    backBottomColor: "#ffffff00" //mainWindow.backBottomColor
+        //}
         // 标题栏
         Item{
             id: titleBar
@@ -87,7 +87,7 @@ Window{
             anchors.right: parent.right  // 右侧对齐父项
             anchors.top: parent.top      // 顶部对齐父项（不再依赖 topbar）
             //width: parent.width - topbar.width
-            height: 50
+            height: 30
 
             // //主题
             // Item{
@@ -142,8 +142,8 @@ Window{
                 // 图标
                 Image {
                     id: logo
-                    height: parent.height
-                    width: parent.height //parent.width/2
+                    height: titleBar.height //parent.height
+                    width: titleBar.height //parent.height //parent.width/2
                     source: "qrc:/image/res/bilibili.png"
                     // onStatusChanged: {
                     //     if (status === Image.Ready) {
@@ -281,7 +281,7 @@ Window{
         Row {
             id: controlbar
             spacing: 30  // 控制菜单之间的间距
-            anchors.left: sidebar.right  // 左侧对齐 Sidebar 右侧
+            anchors.left: parent.left  // 左侧对齐 Sidebar 右侧
             anchors.right: parent.right  // 右侧对齐父项
             anchors.bottom: topbar.top   // 顶部对齐父项（不再依赖 topbar）
             z: 1
@@ -357,9 +357,10 @@ Window{
                 Instrument{
                     height: 90
                     width: height*2
+                    //currentValue: 1
                 }
                 Row{
-                    spacing: 5
+                    spacing: 0
                     Button {
                         id: throttleUp
                         text: "油机升"
@@ -378,10 +379,14 @@ Window{
                     }
 
                     Text{
-                        text:"50"
+                        text:"0"
+                        width: 40
+                        height: 60
                         font.pixelSize: 36
                         font.bold: true
                         color: "lightblue"
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
                     }
                 
                     Button {
@@ -414,12 +419,15 @@ Window{
                 Instrument{
                     height: 90
                     width: height*2
+                    Component.onCompleted: {
+                        currentValue = 50
+                    }
                 }
                 Row{
-                    spacing: 10
+                    spacing: 0
                     Button {
                         id: leftBtn
-                        text: "←"
+                        text: "左转"
                         width: 60
                         height: 60
                         font.pixelSize: 24
@@ -429,15 +437,19 @@ Window{
                     }
 
                     Text{
-                        text:"50"
+                        text:"0"
+                        width: 60
+                        height: 60
                         font.pixelSize: 36
                         font.bold: true
                         color: "lightgreen"
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
                     }
 
                     Button {
                         id: rightBtn
-                        text: "→"
+                        text: "右转"
                         width: 60
                         height: 60
                         font.pixelSize: 24
@@ -486,9 +498,10 @@ Window{
             //}
 
             Column {
+                id: switchbtns
                 anchors.bottom: parent.bottom
                 anchors.bottomMargin: 5
-                anchors.right: throttle.left
+                anchors.right: parent.right
                 spacing: 20
 
                 // 开关按钮1
@@ -540,19 +553,20 @@ Window{
                 id: throttle
                 anchors.bottom: parent.bottom
                 anchors.bottomMargin: 5
-                anchors.right: parent.right
+                anchors.right: switchbtns.left
                 leftPadding: 5 // 添加左侧间距
                 bottomPadding: 5
                 spacing: 5
                 Instrument{
                     height: 90
                     width: height*2
+                    //currentValue: 1
                 }
                 Row{
-                    spacing: 10
+                    spacing: 0
                     Button {
                         id: forwardBtn
-                        text: "↓"
+                        text: "减油"
                         width: 60
                         height: 60
                         font.pixelSize: 24
@@ -561,14 +575,18 @@ Window{
                         }
                     }
                     Text{
-                        text:"50"
+                        text:"0"
+                        width: 60
+                        height: 60
                         font.pixelSize: 36
                         font.bold: true
                         color: "pink"
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
                     }
                     Button {
                         id: backwardBtn
-                        text: "↑"
+                        text: "加油"
                         width: 60
                         height: 60
                         font.pixelSize: 24
@@ -655,7 +673,7 @@ Window{
         Pages{
             id: pages
             //z: -1
-            anchors.left: sidebar.right
+            anchors.left: parent.left
             //width: parent.width - sidebar.width
             //anchors.left: parent.left
             anchors.right: parent.right

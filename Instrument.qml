@@ -5,7 +5,7 @@ Item {
 
     property double minValue: 0
     property double maxValue: 100
-    property double currentValue: 50
+    property double currentValue: 1
     // 背景圆弧线宽
     property double btm_lineWidth: parent.width/20
     // 背景圆弧颜色

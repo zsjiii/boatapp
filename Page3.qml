@@ -89,7 +89,7 @@ Page {
         // 视频播放器
         MediaPlayer {
             id: videoPlayer
-            source: "rtsp://184.72.239.149/vod/mp4:BigBuckBunny_115k.mov"
+            source: "rtsp://192.168.0.104:554/live"
             autoPlay: true
             videoOutput: videoOutput
         }

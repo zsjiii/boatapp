@@ -12,13 +12,16 @@ Item {
     property color backTopColor: "#2c3e50"
     property color backBottomColor: "#1a2530"
     property bool menuExpanded: false
-    property bool unlockTabLocked: true
+    property bool unlockTabLocked: false
     property int currentIndex: 0
-    property int itemnum: 10
+    property int taskIndex: 0
+    property int itemnum: 12
     property int itemwidth: width/(itemnum*2)
 
     // 定义4个飞行模式
     property var flightModes: ["遥控", "自主航线", "一键返航", "悬停"] //0x01 遥控 0x11 自动巡航 0x12 返航 0x13 悬停 
+    // 定义8个任务
+    property var taskSetting: ["航点规划", "区域规划", "平行线规划", "任务加载", "任务保存", "任务暂停", "任务继续", "任务取消"] 
 
     // 菜单项数据
     property var menuItems: [
@@ -333,28 +336,170 @@ Item {
                 }
 
                 // 操作按钮
-                Row {
+                //Row {
+                //    Layout.alignment: Qt.AlignHCenter
+                //    spacing: 15
+                
+                //    Button {
+                //        text: "确认"
+                //        onClicked: modeSelectionPopup.close()
+                //        background: Rectangle {
+                //            color: "#3498db"
+                //            radius: 6
+                //        }
+                //        contentItem: Text {
+                //            text: parent.text
+                //            color: "white"
+                //        }
+                //    }
+
+                //    Button {
+                //        text: "取消"
+                //        onClicked: modeSelectionPopup.close()
+                //        flat: true
+                //    }
+                //}
+            }
+        }
+
+        Popup {
+            id: taskSettingPopup
+            width: 400
+            height: 500
+            x: 0//(parent.width - width) / 2
+            y: -height //topbar.y - height - 20 //(parent.height - height) / 2
+            //anchors.bottom: topbar.top
+            modal: true
+            focus: true
+            closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
+            padding: 20
+
+            background: Rectangle {
+                color: "white"
+                radius: 12
+                border.color: "#ddd"
+                border.width: 1
+            }
+
+            ColumnLayout {
+                anchors.fill: parent
+                spacing: 15
+
+                // 标题
+                Text {
+                    text: "设置任务"
+                    font.pixelSize: 22
+                    font.bold: true
+                    color: "#2c3e50"
                     Layout.alignment: Qt.AlignHCenter
-                    spacing: 15
+                }
 
-                    Button {
-                        text: "确认"
-                        onClicked: modeSelectionPopup.close()
-                        background: Rectangle {
-                            color: "#3498db"
-                            radius: 6
+                // 分隔线
+                Rectangle {
+                    Layout.fillWidth: true
+                    height: 1
+                    color: "#ecf0f1"
+                }
+
+                // 模式列表
+                ListView {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    model: 8
+                    spacing: 10
+                    clip: true
+
+                    delegate: Rectangle {
+                        width: ListView.view.width
+                        height: 80
+                        color: index === taskIndex ? 
+                            (index === 3 ? "#fff3cd" : "#e3f2fd") : 
+                            (mouseArea.containsMouse ? "#f8f9fa" : "white")
+                        border.color: index === taskIndex ? 
+                                    (index === 3 ? "#ffc107" : "#2196f3") : 
+                                    "#e9ecef"
+                        radius: 8
+
+                        Row {
+                            anchors.fill: parent
+                            anchors.margins: 15
+                            spacing: 15
+                            anchors.verticalCenter: parent.verticalCenter
+
+                            // 模式图标
+                            //Text {
+                            //    text: modeIcons[index]
+                            //    font.pixelSize: 28
+                            //    anchors.verticalCenter: parent.verticalCenter
+                            //}
+
+                            // 模式信息
+                            Column {
+                                anchors.verticalCenter: parent.verticalCenter
+                                spacing: 5
+                                width: parent.width - 70
+
+                                Text {
+                                    text: taskSetting[index]
+                                    font.pixelSize: 16
+                                    font.bold: true
+                                    color: index === taskIndex ? 
+                                        (index === 3 ? "#856404" : "#1976d2") : 
+                                        "#2c3e50"
+                                }
+
+                                //Text {
+                                //    text: modeDescriptions[index]
+                                //    font.pixelSize: 12
+                                //    color: index === taskIndex ? 
+                                //        (index === 3 ? "#856404" : "#546e7a") : 
+                                //        "#7f8c8d"
+                                //    width: parent.width
+                                //    wrapMode: Text.WordWrap
+                                //}
+                            }
+
+                            // 选中标记
+                            Text {
+                                text: "✓"
+                                visible: index === taskIndex
+                                font.pixelSize: 18
+                                color: index === 3 ? "#856404" : "#1976d2"
+                                anchors.verticalCenter: parent.verticalCenter
+                                anchors.right: parent.right
+                            }
                         }
-                        contentItem: Text {
-                            text: parent.text
-                            color: "white"
+
+                        // 鼠标交互区域
+                        MouseArea {
+                            id: mouseArea
+                            anchors.fill: parent
+                            hoverEnabled: true
+                            onClicked: {
+                                taskIndex = index
+                                taskSettingPopup.close()
+                                //modeChangePopup.open()
+                                //if(taskIndex === )
+                                if(taskIndex === 0){
+                                    var component = Qt.createComponent("waypointsetPage.qml")
+                                    if (component.status === Component.Ready) {
+                                        let settingsWin = component.createObject(mainWindow)
+                                        settingsWin.show()
+                                    } else {
+                                        console.error("创建设置窗口错误:", component.errorString())
+                                    }
+                                }  
+                                console.log("切换到模式:", taskSetting[index])
+                            }
                         }
                     }
+                }
 
-                    Button {
-                        text: "取消"
-                        onClicked: modeSelectionPopup.close()
-                        flat: true
-                    }
+                // 分隔线
+                Rectangle {
+                    Layout.fillWidth: true
+                    height: 1
+                    color: "#ecf0f1"
                 }
             }
         }
@@ -387,13 +532,19 @@ Item {
                         unlockTabLocked = !unlockTabLocked
                         // 发送相应的命令
                         if (unlockTabLocked) {
-                            cmdSend.Ctrl_Cmd_Send(0x04,0x01) // 发送锁定命令
+                            cmdSend.Ctrl_Cmd_Send(0x04,0x02) // 发送锁定命令
                         } else {
-                            cmdSend.Ctrl_Cmd_Send(0x04, 0x02) // 发送解锁命令
+                            cmdSend.Ctrl_Cmd_Send(0x04, 0x01) // 发送解锁命令
                         }
                         //cmdSend.Ctrl_Cmd_Send(0x04,0x01)
                         //cmdSend.Ctrl_Cmd_Send(0x04,0x02)
                     }
+                }
+
+                TabItem_ZSJ1 {
+                    tabTitle: "home点"
+                    tabIcon: ""
+                    tabDescription: "待设置"
                 }
 
                 TabItem_ZSJ1 {
@@ -408,43 +559,49 @@ Item {
                     }
                 }
 
-                //TabItem_ZSJ1 {
-                //    tabTitle: "控制模式"
-                //    tabIcon: ""
-                //    tabDescription: "无人控制"
-                //}
-
                 TabItem_ZSJ1 {
-                    tabTitle: "经纬度"
+                    tabTitle: "任务设置"
                     tabIcon: ""
-                    tabDescription: "120"
-                }
-
-                TabItem_ZSJ1 {
-                    tabTitle: "水深"
-                    tabIcon: ""
-                    tabDescription: "0"
-                    isActive: true
+                    tabDescription: taskSetting[taskIndex]
+                    onClicked: {
+                    // 显示数字选择弹窗
+                        taskSettingPopup.open()
+                        //if(taskIndex === 0){
+                        //    var component = Qt.createComponent("canshusetPage.qml")
+                        //    if (component.status === Component.Ready) {
+                        //        let settingsWin = component.createObject(mainWindow)
+                        //        settingsWin.show()
+                        //    } else {
+                        //        console.error("创建设置窗口错误:", component.errorString())
+                        //    }
+                        //}
+                    }
                 }
 
                 TabItem_ZSJ1 {
                     tabTitle: "航速"
                     tabIcon: ""
                     tabDescription: "0"
-                    isActive: true
                 }
 
                 TabItem_ZSJ1 {
-                    tabTitle: "电量"
+                    tabTitle: "航向"
                     tabIcon: ""
                     tabDescription: "0"
                     isActive: true
                 }
 
                 TabItem_ZSJ1 {
-                    tabTitle: "油量"
+                    tabTitle: "姿态"
                     tabIcon: ""
                     tabDescription: "0"
+                    isActive: true
+                }
+
+                TabItem_ZSJ1 {
+                    tabTitle: "油量/电量"
+                    tabIcon: ""
+                    tabDescription: "0/0"
                     isActive: true
                 }
 
@@ -459,6 +616,12 @@ Item {
                     tabTitle: "距离"
                     tabIcon: ""
                     tabDescription: "0"
+                    isActive: true
+                }
+                TabItem_ZSJ1 {
+                    tabTitle: "模拟避障"
+                    tabIcon: ""
+                    tabDescription: "未设置"
                     isActive: true
                 }
 

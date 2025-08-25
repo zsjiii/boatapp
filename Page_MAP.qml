@@ -73,28 +73,28 @@ Item {
             }
 
             // 关闭按钮
-            Button {
-                width: 30
-                height: 30
-                anchors {
-                    right: parent.right
-                    rightMargin: 5
-                    verticalCenter: parent.verticalCenter
-                }
-                background: Rectangle {
-                    color: "transparent"
-                    radius: 15
-                    border.color: "#e74c3c"
-                }
-                contentItem: Text {
-                    text: "×"
-                    color: "#e74c3c"
-                    font.pixelSize: 20
-                    font.bold: true
-                    anchors.centerIn: parent
-                }
-                onClicked: videoOverlay.visible = false
-            }
+            //Button {
+            //    width: 30
+            //    height: 30
+            //    anchors {
+            //        right: parent.right
+            //        rightMargin: 5
+            //        verticalCenter: parent.verticalCenter
+            //    }
+            //    background: Rectangle {
+            //        color: "transparent"
+            //        radius: 15
+            //        border.color: "#e74c3c"
+            //    }
+            //    contentItem: Text {
+            //        text: "×"
+            //        color: "#e74c3c"
+            //        font.pixelSize: 20
+            //        font.bold: true
+            //        anchors.centerIn: parent
+            //    }
+            //    onClicked: videoOverlay.visible = false
+            //}
         }
 
         // 视频显示区域
@@ -112,7 +112,7 @@ Item {
             // 视频播放器
             MediaPlayer {
                 id: videoPlayer
-                source: "rtsp://184.72.239.149/vod/mp4:BigBuckBunny_115k.mov"
+                source: "rtsp://192.168.0.104:554/live"
                 autoPlay: true
                 videoOutput: videoOutput
             }

@@ -24,7 +24,7 @@ Item {
         //anchors.right: root.right
         anchors.top: root.top
         anchors.bottom: root.bottom
-        border.color: "#80ffffff"
+        border.color: "transparent" //"#80ffffff"
 
         gradient: Gradient{
             GradientStop{position:0.0;color: root.backTopColor}
